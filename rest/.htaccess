@@ -1,0 +1,6 @@
+AuthType Digest
+# (For the following line, check the explanation below+)
+AuthName "Restricted resources"
+# (Following line is optional++)
+AuthUserFile /usr/syno/apache/passwd/passwords
+Require user imLab
