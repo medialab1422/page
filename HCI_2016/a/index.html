@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Paint Look Rendering Implementation">
+	<meta name="author" content="101820307 @ ntut.tw 2016.06">
+	<title>
+		Paint Look Rendering Implementation
+	</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="Image/Icon_t.png">
+</head>
+
+<body>
+	<nav class="mainNav">
+		<div class="center">
+			<a href="#Introduction"><div class="navButton">簡介</div></a>
+			<a href="#Implementation"><div class="navButton">實作</div></a>
+			<a href="#DemoVideo"><div class="navButton">影片</div></a>
+			<a href="#DemoProgram"><div class="navButton">程式</div></a>
+			<a href="#Reference"><div class="navButton">參考</div></a>
+		</div>
+	</nav>
+
+	<div class="PPT" id="ALGORITHM">
+		<section id="Introduction">
+			<div class="PPTPAGE">
+				<h2 class="Description">簡介</h2>
+				<p class="DescriptionDetail">用模擬畫筆的方式把圖片變得像是油畫一樣</p>
+				<img class="SamplePic" src="Image/SamplePic/pumpkin.png">
+				<img class="SamplePic" src="Image/SamplePic/pumpkin.painted.4.png">
+			</div>
+		</section>
+		<section id="Implementation">
+			<div class="PPTPAGE">
+				<h2 class="Description">建立畫布</h2>
+				<img class="SamplePic" src="Image/SamplePic/black.png">
+			</div>
+			<div class="PPTPAGE">
+				<h2 class="Description">載入圖片</h2>
+				<img class="SamplePic" src="Image/SamplePic/pumpkin.png">
+			</div>
+			<div class="PPTPAGE">
+				<h2 class="Description">模糊處理影像</h2>
+				<img class="SamplePic" src="Image/SamplePic/pumpkin.blur.8.png">
+			</div>
+			<div class="PPTPAGE">
+				<h2 class="Description">計算影像差值</h2>
+				<p class="DescriptionDetail">模糊處理過的影像 - 畫布影像</p>
+				<img class="SamplePic" src="Image/SamplePic/gray.png">
+			</div>
+			<div class="PPTPAGE">
+				<h2 class="Description">以一定的距離切割影像</h2>
+				<p class="DescriptionDetail">模糊處理過的影像 - 畫布影像</p>
+				<img class="SamplePic" src="Image/SamplePic/grid.png">
+			</div>
+			<div class="PPTPAGE">
+				<h2 class="Description">每一個區塊找出差值最大的點</h2>
+				<img class="SamplePic" src="Image/SamplePic/beginPoints.png">
+			</div>		
+			<div class="PPTPAGE">
+				<h2 class="Description">由找出的點開始產生路徑</h2>
+				<img class="SamplePic" src="Image/SamplePic/grow.png">
+			</div>
+			<div class="PPTPAGE">
+				<h2 class="Description">路徑產生方法</h2>
+				<p class="DescriptionDetail">沿著梯度相同的地方生長</p>
+				<img class="SamplePic" src="Image/SamplePic/growing.png">
+			</div>
+			<div class="PPTPAGE">
+				<h2 class="Description">隨機擺放所有曲線</h2>
+				<img class="SamplePic" src="Image/SamplePic/pumpkin.painted.8.png">
+			</div>
+			<div class="PPTPAGE">
+				<h2 class="Description">用其他筆刷大小重複以上動作</h2>
+				<img class="SamplePic" src="Image/SamplePic/pumpkin.painted.4.png">
+				<img class="SamplePic SamplePicMore" src="Image/SamplePic/pumpkin.painted.2.png">
+				<img class="SamplePic" src="Image/SamplePic/pumpkin.painted.1.png">
+			</div>
+			<div class="PPTPAGE">
+				<h2 class="Description">完成了</h2>
+				<img class="SamplePic" src="Image/SamplePic/pumpkin.painted.1.png">
+			</div>
+		</section>
+
+		<section id="DemoVideo">
+			<!--好麻煩 不分頁了-->
+			<div class="PPTPAGE" >
+				<h2 class="Description">示範影片</h2>
+				<video controls style="width:50%;"><source src="Image/demo.mp4" type="video/mp4" controls="controls">
+				</video>
+			</div>
+		</section>
+		<section id="DemoProgram">
+			<div class="PPTPAGE" >
+				<a href="Image/souce.rar"><h2 class="Description">程式碼 (C#)</h2></a>
+				<p class="DescriptionDetail">有一點亂不要在意</p>
+			</div>
+		</section>
+		<section id="Reference">
+			<div class="PPTPAGE PPTPAGENotImportant" style="overflow: hidden;">
+				<h2 class="Description">參考文獻簡介</h2>
+				<p class="DescriptionDetail" style="float:left;text-align:left;margin-left:20px;">• Painterly Rendering with Curved Brush Strokes of Multiple Sizes</p>
+				<p class="DescriptionDetail" style="float:left;text-align:left;margin-left:20px;">• YEAR 1998</p>
+				<p class="DescriptionDetail" style="float:left;text-align:left;margin-left:20px;">• AUTHOR Aaron Hertzmann Media Research Laboratory Department of Computer Science New York University</p>
+			</div>
+		</section>
+	</div>
+</body>
+
+</html>

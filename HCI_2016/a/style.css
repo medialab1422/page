@@ -1,0 +1,62 @@
+body{min-width: 300px; border: solid 1px rgba(0,0,0,1);margin: 0 0 0 0;}
+body {background-image: url("Image/PumpkinGroupRandom.png"); background-size: 10% auto;background-repeat: repeat; }
+
+div.PPT {clear: both;margin: auto; text-align: center;border: solid 1px;border-color: rgba(0,0,0,1);}
+div.PPTPAGE {clear: both;margin: auto;margin-top: 20px;margin-bottom: 20px; width: 80%;  border: 1px solid rgba(0,0,0,0);}
+div.PPTPAGENotImportant { background-color: rgba(100,100,100,1); opacity: 0.8;}
+
+/*Key Sample Picture*/
+img.SamplePic{margin: 10px 10px 10px 10px;width: 30%;}
+/*More Samole Picture*/
+img.SamplePicMore{margin: 10px 10px 10px 10px;width: 30%;}
+
+#Introduction > div.PPTPAGE {background-color: rgba(43, 236, 255, 0.9);}
+#Implementation > div.PPTPAGE {background-color: rgba(80,190,255,0.9);}
+#DemoVideo > div.PPTPAGE {background-color: rgba(147,110,235,0.8);}
+#DemoProgram > div.PPTPAGE{background-color: rgba(147,110,235,0.9);}
+
+.Description{clear: both; display: block;margin: auto; color: rgba(0,0,0,1);}
+.DescriptionDetail{clear: both; display: block;margin: 10 auto; color: rgba(0,0,0,1);font-size: large;}
+
+.mainNav{
+	text-align: center;
+	width: 100%;
+	background-color: rgba(255,255,255,0.8);
+	display: block;
+	height: auto;
+}
+.mainNav .navButton{
+	all:initial;
+	text-align: center;
+	padding:20px 20px 20px 20px;
+	display: inline-block;
+	font-size: x-large;
+}
+
+
+.mainNav .navButton:hover{
+	background-color: gray;
+
+}
+
+div.center{
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+@media only screen and (max-width: 720px){
+	img.SamplePic{width: 60%;clear: both;}
+}
+
+@media only screen and (max-width: 360px){
+	img.SamplePic{width: 90%;clear: both;}
+	img.SamplePicMore{display: none;}
+}
+
+html ,body {
+	height: 100%;
+	margin: 0;
+	min-height: 100%;
+	padding: 0;
+}
