@@ -1,101 +1,107 @@
-﻿<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" manifest="/demo.appcache" > <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>計算機圖學-Computer Graphic</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
+<head>
+    <meta charset="UTF-8">
+    <title> 計算機圖學 </title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/earlyaccess/cwtexkai.css' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="./oldData/icon.png" type="image/png">
+</head>
 
-        <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+<body>
+    <header>
+        <div id="nav">
+            <button style="padding:16px 50px;" onclick="scrolltoID('about')">介紹</button>
 
-        <div class="header-container">
-            <header class="wrapper clearfix">
-                <a href="index.html"> <h1 class="title">計算機圖學</h1></a>
-                <nav>
-                    <ul>
-						
-                        <li><a href="http://aps.ntut.edu.tw/course/tw/Curr.jsp?format=-2&code=5903302">課程連結</a></li>					
-                        <li><a href="demo_2013.html">2013 DEMO</a></li>
-                        <li><a href="demo_2014.html">2014 DEMO</a></li>
-						<li><a href="demo_2015.html">2015 DEMO</a></li>
-                    </ul>
-                </nav>
-            </header>
+            <button onclick="scrolltoID('portfolio')">作業DEMO：</button>
+            <div class="dropdown">
+                <button id="demo" class="dropbtn"> </button>
+                <div id="yearDropdown" class="dropdown-content">
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button id="group" class="dropbtn">各組別 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                    </svg> </button>
+                <div id="groupDropdown" class="dropdown-content">
+                </div>
+            </div>
+            <a href="../graphicClassOld/" id="oldlink">OLD LINK</a>
         </div>
+    </header>
 
-        <div class="main-container">
-            <div class="main wrapper clearfix">
+    <!-- ABOUT -->
+    <section id="about">
+        <!-- CONTAINER -->
+        <div class="container">
+            <h2>計算機圖學</h2>
+            <div style="padding-left: 0;" class="col-md-8">
+                <p>使學生熟悉計算機圖學的基本原理、方法、及工具，內容包括： （１）二維及三維幾何圖形之產生 （２）二維及三維何圖形之轉換 （３）隱藏面及隱藏線之處理（４）色彩原理 （５）光影及暗影技術 學生將需撰寫電腦程式或使用幾何算圖程式 </p>
 
-                <article>
-                    <header>
-                        <h1>計算機圖學</h1>
-                        <p>使學生熟悉計算機圖學的基本原理、方法、及工具，內容包括： （１）二維及三維幾何圖形之產生 （２）二維及三維何圖形之轉換 （３）隱藏面及隱藏線之處理（４）色彩原理 （５）光影及暗影技術 學生將需撰寫電腦程式或使用幾何算圖程式  </p>
-                    </header>
-                    <section>
-                        <h2>課程簡介</h2>
-                        <p> 
-						<ul>
-						<li>Week01. Course Introduction , OpenGL setup</li>
-                        <li>Week02. What is Computer Graphics, Unity-(1)</li>
-                        <li>Week03. Basic OpenGL / Input and Interaction, Unity-(2)</li>
-                        <li>Week04. Polygonal Meshes , Transformation, Hierarchical Modeling</li>
-                        <li>Week05.Viewing & Projection</li>
-                        <li>Week06~08. Rasterization   Unity (3)(4)(5)</li>
-                        <li>Week09. - no class</li>
-                        <li>Week10. Lighting & Shading</li>
-                        <li>Week11.  Texture mapping</li>
-                        <li>Week12. Curve & Stroke</li>
-                        <li>Week13. Game Project Review</li>
-                        <li>Week14. Shader, modern OpenGL</li>
-                        <li>Week15. Exam</li>
-                        <li>Week16. Special Topic</li>
-                        <li>Week17. Special Topic</li>
-                        <li>Week18. Final Game Demo </li>
+                <h2 style="margin:0;padding: 0;">課程簡介</h2>
+                <p>課程簡介
+                <ul>
+                    <li>Week01. Course Introduction , OpenGL setup</li>
+                    <li>Week02. What is Computer Graphics, Unity-(1)</li>
+                    <li>Week03. Basic OpenGL / Input and Interaction, Unity-(2)</li>
+                    <li>Week04. Polygonal Meshes , Transformation, Hierarchical Modeling</li>
+                    <li>Week05.Viewing & Projection</li>
+                    <li>Week06~08. Rasterization   Unity (3)(4)(5)</li>
+                    <li>Week09. - no class</li>
+                    <li>Week10. Lighting & Shading</li>
+                    <li>Week11.  Texture mapping</li>
+                    <li>Week12. Curve & Stroke</li>
+                    <li>Week13. Game Project Review</li>
+                    <li>Week14. Shader, modern OpenGL</li>
+                    <li>Week15. Exam</li>
+                    <li>Week16. Special Topic</li>
+                    <li>Week17. Special Topic</li>
+                    <li>Week18. Final Game Demo </li>
+                    </p>
+            </div>
 
-						</p>
-                    </section>
-                </article>
+            <div class="side col-md-4">
 
-                <aside>
-                    <h3>Computer Graphics </h3>
-                    <p>The objective of this course is to familiarize the student with basic principles, methods, and tools of computer graphics. Topics include: 1.Generation of 2D and 3D geometric shapes 2.2D and 3D transformation 3.Hidden surfaces and hidden lines techniques 4.Color principles 5.Shading and shadowing techniques. The student will be required to write computer programs and/or use modeling and rendering packages </p>
-                </aside>
-
-            </div> <!-- #main -->
-        </div> <!-- #main-container -->
-
-        <div class="footer-container">
-            <footer class="wrapper">
-                <h3>台北科技大學 資工系 江佩穎教授</h3>
-            </footer>
+                <h3 style="font-size: 30px;">Computer Graphics</h3>
+                <br>
+                <p>The objective of this course is to familiarize the student with basic principles, methods, and tools of computer graphics. Topics include: 1.Generation of 2D and 3D geometric shapes 2.2D and 3D transformation 3.Hidden surfaces and hidden lines techniques 4.Color principles 5.Shading and shadowing techniques. The student will be required to write computer programs and/or use modeling and rendering packages.
+                </p>
+            </div>
         </div>
+        <!-- END OF CONTAINER -->
+    </section>
+    <!-- END OF ABOUT -->
 
-        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
 
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>-->
+        <!-- CONTAINER -->
+        <div class="container">
+            <h2 id="title">作業DEMO</h2>
+            <div id="portfolioContainer"></div>
+        </div>
+        <!-- END OF CONTAINER -->
+    </section>
+    <!-- END OF PORTFOLIO -->
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <!-- <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>-->
-    </body>
+    <!-- FOOTER -->
+    <div class="footer-container">
+        <footer class="wrapper">
+            <h3>台北科技大學 資工系 江佩穎教授</h3>
+        </footer>
+    </div>
+    <!-- END OF FOOTER -->
+
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <script src="./script.js"></script>
+</body>
+
 </html>
