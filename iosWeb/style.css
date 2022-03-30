@@ -1,10 +1,22 @@
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 body {
     font-family: "cwTeXKai", serif;
     background-color: antiquewhite;
     font-size: 20px;
 }
 
-video{
+video {
     background-color: black;
 }
 
@@ -249,27 +261,35 @@ h1 .logo {
     display: block;
     min-width: max-content;
 }
-#yearDropdown button{
+
+#yearDropdown button {
     padding: 12px;
 }
-#yearDropdown button:hover{
+
+#yearDropdown button:hover {
     padding: 12px;
 }
-#groupDropdown button{
+
+#groupDropdown button {
     padding: 2px 12px;
 }
-#groupDropdown button:hover{
+
+#groupDropdown button:hover {
     padding: 2px 12px;
 }
-#oldlink{
-    right: 0;top:0;
+
+#oldlink {
+    right: 0;
+    top: 0;
     position: fixed;
     font-size: 12px;
     color: #e44d26;
 }
-#oldlink:hover{
+
+#oldlink:hover {
     color: white;
 }
+
 #nav>button {
     background-color: Transparent;
     background-repeat: no-repeat;
@@ -286,6 +306,7 @@ h1 .logo {
     color: black;
     background-color: antiquewhite;
 }
+
 .dropdown-content button:hover {
     width: 100%;
     color: black;
@@ -776,7 +797,7 @@ h1 .logo {
 }
 
 @media screen and (max-width: 790px) {
-    #about{
+    #about {
         /* background-color:black; */
         margin: 18% 0;
     }

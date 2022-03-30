@@ -1,8 +1,8 @@
 var year = []
 var allData = []
 var currentYear = null;
-$(document).ready(function () {
-    $(document).on("scroll", function () {
+$(document).ready(function() {
+    $(document).on("scroll", function() {
         secondPage = $("nav li:nth-child(2) a").attr("href")
 
         if ($("body").scrollTop() >= $("nav").height()) {
@@ -12,7 +12,7 @@ $(document).ready(function () {
         }
     })
 
-    d3.text("data.csv", function (data) {
+    d3.text("data.csv", function(data) {
         var parsedCSV = d3.csv.parseRows(data)
 
         var current_year = ""
@@ -57,8 +57,8 @@ function SetDropDown() {
 
 function HideDropDown() {
     if (IsPC()) {
-        $(".dropdown-content").hide(0, function () {
-            setTimeout(function () {
+        $(".dropdown-content").hide(0, function() {
+            setTimeout(function() {
                 $(".dropdown-content").css("display", "");
             }, 100)
         })
@@ -90,11 +90,12 @@ function ShowYearDemo(current_year) {
     for (var i = 0; i < allData.length; i++) {
         if (allData[i].year == current_year) {
             var sectionHtml = `
-                <div id="` + i + `" class="overlay" style="background-color:` + randomColor() + `">
+                <div id="` + i + `" class="overlay reveal " style="background-color:` + randomColor() + `">
                     <h4 class="heading">` + allData[i].title + `</h4>
-                    <video width="100%" height="640" poster=` + allData[i].img + ` controls preload="none">
-                        <source src="` + allData[i].video + `">
-                    </video>
+                   
+                    <iframe id="ytplayer" type="text/html" width="100%" height="640"
+                    src="https://www.youtube.com/embed/` + allData[i].video + `?autoplay=1"
+                    frameborder="0"></iframe>
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
                         <br>
@@ -119,7 +120,8 @@ function IsPC() {
     var userAgentInfo = navigator.userAgent;
     var Agents = ["Android", "iPhone",
         "SymbianOS", "Windows Phone",
-        "iPad", "iPod"];
+        "iPad", "iPod"
+    ];
     var flag = true;
     for (var v = 0; v < Agents.length; v++) {
         if (userAgentInfo.indexOf(Agents[v]) > 0) {
@@ -130,7 +132,7 @@ function IsPC() {
     return flag;
 }
 
-document.body.onscroll = function () {
+document.body.onscroll = function() {
     let isIngroup = false;
     let icon = ` <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
     fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
@@ -151,4 +153,22 @@ document.body.onscroll = function () {
     if (!isIngroup) {
         $("#group").html("各組別" + icon)
     }
+
+    reveal()
 };
+
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        } else {
+            reveals[i].classList.remove("active");
+        }
+    }
+}
