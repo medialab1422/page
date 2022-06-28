@@ -1,8 +1,8 @@
 var year = []
 var allData = []
 var currentYear = null;
-$(document).ready(function() {
-    $(document).on("scroll", function() {
+$(document).ready(function () {
+    $(document).on("scroll", function () {
         secondPage = $("nav li:nth-child(2) a").attr("href")
 
         if ($("body").scrollTop() >= $("nav").height()) {
@@ -12,7 +12,7 @@ $(document).ready(function() {
         }
     })
 
-    d3.text("data.csv", function(data) {
+    d3.text("data.csv", function (data) {
         var parsedCSV = d3.csv.parseRows(data)
 
         var current_year = ""
@@ -27,7 +27,7 @@ $(document).ready(function() {
                 year: current_year,
                 title: parsedCSV[i][0],
                 video: parsedCSV[i][1],
-                img: parsedCSV[i][2],
+                pdf: parsedCSV[i][2],
                 desc: parsedCSV[i][3],
             }
 
@@ -57,8 +57,8 @@ function SetDropDown() {
 
 function HideDropDown() {
     if (IsPC()) {
-        $(".dropdown-content").hide(0, function() {
-            setTimeout(function() {
+        $(".dropdown-content").hide(0, function () {
+            setTimeout(function () {
                 $(".dropdown-content").css("display", "");
             }, 100)
         })
@@ -88,6 +88,7 @@ function ShowYearDemo(current_year) {
     $("#portfolioContainer").empty()
     $("#groupDropdown").empty()
     for (var i = 0; i < allData.length; i++) {
+        var index = 0;
         if (allData[i].year == current_year) {
             var sectionHtml = `
                 <div id="` + i + `" class="overlay reveal " style="background-color:` + randomColor() + `">
@@ -97,9 +98,24 @@ function ShowYearDemo(current_year) {
                     src="https://www.youtube.com/embed/` + allData[i].video + `?autoplay=1"
                     frameborder="0"></iframe>
                     <div class="col-md-2"></div>
+                    
                     <div class="col-md-8">
                         <br>
-                        <p id="desc">` + allData[i].desc + `</p>
+                        <a href="#modal-10`+ allData[i].pdf + `" class="link" style="color:#26ccc1">` + isPDF(allData[i].pdf, allData[i].title) + `</a>
+                        <div data-ml-modal id="modal-10`+ allData[i].pdf + `">
+                            <a href="#!" class="modal-overlay"></a>
+                            <div class="modal-dialog modal-dialog-lg">
+                                <a href="#!" class="modal-close">&times;</a>
+                                <h3>` + allData[i].title + `</h3>
+                                <div class="modal-content newspaper">
+                                    <iframe src="https://medialab1422.github.io/iOS/`+ allData[i].pdf + `.pdf" width="100%" height="95%"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p id="desc" style="font-family:none">` + allData[i].desc + `</p>
+                    
+
                     </div>
                 </div><br>`
 
@@ -108,6 +124,10 @@ function ShowYearDemo(current_year) {
             $("#groupDropdown").append(`<button onclick="UpdateGroupDropDown(` + i + `)" data-offset="-140">` + allData[i].title + `</button>`)
         }
     }
+}
+
+function isPDF(name, title) {
+    return name == "" ? "" :"view pdf： " + title + ".pdf"
 }
 
 function scrolltoID(id, speed = 800, offset = 0) {
@@ -132,7 +152,7 @@ function IsPC() {
     return flag;
 }
 
-document.body.onscroll = function() {
+document.body.onscroll = function () {
     let isIngroup = false;
     let icon = ` <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
     fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
