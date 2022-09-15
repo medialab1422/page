@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap');
+
+#homeHeader {
+    width: 820px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+#navbar {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    width: 820px;
+    
+}
+
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}

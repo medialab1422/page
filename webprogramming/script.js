@@ -23,14 +23,14 @@ $(document).ready(function () {
             let isSubmitColor = (allData[i].page == "-") ? `style="background-color:#DBA4A4"` : ``;
             let isSubmit = (allData[i].page == "-") ? ` **未繳交作業**` : ``;
             let page = allData[i].urlpage == 0 ? `./resources/${allData[i].studentID}_final/${allData[i].page}` : `${allData[i].page}`;
+            let documentationBtn = allData[i].urlpage == 0 ?``: `<a href="https://media.githubusercontent.com/media/medialab1422/page/main/webprogramming/resources/${allData[i].studentID}_final/${allData[i].studentID}_final.pdf" class="btn btn-primary m-2" target="_blank">documentation</a>`;
 
             let card = `
             <div class="card col-md-6 col-sm-12 mt-1" id="${allData[i].studentID}${allData[i].name}" ` + isSubmitColor + `>
                 <div class="card-body col-md-12">
                   <h5 class="card-title">${allData[i].studentID} ${allData[i].name}` + isSubmit + `</h5>
                     <a href="`+ page + `" class="btn btn-primary m-2" target="_blank">webpage</a>
-                    <a href="https://media.githubusercontent.com/media/medialab1422/page/main/webprogramming/resources/${allData[i].studentID}_final/${allData[i].studentID}_final.pdf" class="btn btn-primary m-2" target="_blank">documentation</a>
-                 
+                    ` + documentationBtn + `
                     <iframe id="ytplayer" type="text/html" width="100%" height="640"
                     src="https://www.youtube.com/embed/` + allData[i].video + `?autoplay=0"
                     frameborder="0"></iframe>
