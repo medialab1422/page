@@ -32,7 +32,7 @@ $(document).ready(function () {
                     <a href="./resource/${allData[i].studentID}_final/${allData[i].readme}" class="btn btn-primary m-2" target="_blank">documentation</a>
                  
                     <iframe id="ytplayer" type="text/html" width="100%" height="640"
-                    src="https://www.youtube.com/embed/` + allData[i].video + `?autoplay=1"
+                    src="https://www.youtube.com/embed/` + allData[i].video + `?autoplay=0"
                     frameborder="0"></iframe>
               </div>
                 </div>
