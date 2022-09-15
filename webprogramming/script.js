@@ -29,7 +29,7 @@ $(document).ready(function () {
                 <div class="card-body col-md-12">
                   <h5 class="card-title">${allData[i].studentID} ${allData[i].name}` + isSubmit + `</h5>
                     <a href="`+ page + `" class="btn btn-primary m-2" target="_blank">webpage</a>
-                    <a href="https://media.githubusercontent.com/media/medialab1422/page/main/webprogramming/resources/${allData[i].studentID}_final/${allData[i].readme}" class="btn btn-primary m-2" target="_blank">documentation</a>
+                    <a href="https://media.githubusercontent.com/media/medialab1422/page/main/webprogramming/resources/${allData[i].studentID}_final/${allData[i].studentID}_final.pdf" class="btn btn-primary m-2" target="_blank">documentation</a>
                  
                     <iframe id="ytplayer" type="text/html" width="100%" height="640"
                     src="https://www.youtube.com/embed/` + allData[i].video + `?autoplay=0"
