@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap');
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+.display-4{
+    font-size: 100px;
+    color: rgb(255, 217, 0);
+}
+
+.lead{
+    font-size: 40px;
+}
+
+#homeHeader {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-image: url("../images/header2.jpg");
+    background-size: 100%;
+    background-position:unset;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;}
+
+#homeHeader h1,
+#homeHeader p {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#homeHeader .container {
+    position: relative;
+    z-index: 2;
+}
+
+#homeHeader:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: black;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+#homeHeader:hover:before {
+    opacity: .3;
+}
+
+.card {
+    box-shadow: 0 2px 3px rgba(0,0,0,.2);
+    opacity: .85;
+    transform: translate(0px, 2px);
+    transition: all .5s ease;
+}
+
+.card:hover {
+    opacity: 1;
+    box-shadow: 0 25px 30px rgba(0,0,0,.2);
+    transform: translate(0px, -5px);
+}
+
+.card-body {
+    background-color: white;
+}
+
+.price {
+    color: #333;
+    font-weight: 400;
+}
+
+.card-footer {
+    background-color: white;
+    font-size: 12px;
+    text-align: right;
+    color: #666;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.container__input {
+    /* Take the full size */
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    /* Make it transparent */
+    opacity: 1;
+}
+
+.container__icon {
+    text-align: center;
+    margin-right: 8px;
+    padding: 10px;
+    border-radius: 34% 66% 42% 58% / 84% 15% 85% 16% ;
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    width: 130px;
+}
+
+.container__icon:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.btn-grad {background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%)}
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+#imagePreview, #createPostImageURL{
+    text-align: center;
+}
+
+.btn-info{
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    width: 98%;
+    background-position: center;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    align-items: center;
+}
+
+.btn-info:enabled:hover{
+    background: #92fbff;
+    box-shadow: 0 0 5px #74d5d8, 0 0 25px
+    #92fbff, 0 0 50px #92fbff, 0 0 200px #92fbff;
+}
+ 

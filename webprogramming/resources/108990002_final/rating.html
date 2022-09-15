@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hospitel Review System</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/raty/3.1.1/jquery.raty.css">
+    </head>
+
+    <body>
+        <div class="container py-5">
+            <h1 class="display-4 mb-5">Hospitel Review System >> Rating</h1>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-responsive table-hover" width="100%">
+                        <thead>
+                            <tr>
+                                <th>NAME</th>
+                                <th>RATING</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <br>
+                    <a class="btn btn-primary" href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raty/3.1.1/jquery.raty.min.js"></script>
+
+<script>
+
+hospitel = localStorage.getItem('hospitel');
+hospitel = JSON.parse(hospitel);
+html = '';
+
+for (i = 0; i < hospitel.length; i++) {
+    html += '<tr>';
+    html += '<td>' + hospitel[i][0] + '</td>';
+    html += '<td><div id="' + hospitel[i][0] + '"></div></td>';
+    html += '</tr>';
+    console.log(hospitel[i]);
+}
+
+$('tbody').html(html);
+
+for (i = 0; i < hospitel.length; i++) {
+    $('#' + hospitel[i][0]).raty({
+        starType: 'i',
+        number: 5,
+        score: hospitel[i][1],
+        click: function (score, evt) {
+            // alert('ID: ' + this.id + "\nscore: " + score + "\nevent: " + evt);
+            for (i = 0; i < hospitel.length; i++) {
+                if (hospitel[i][0] == this.id) {
+                    hospitel[i][1] = score;
+                    break;
+                }
+            }
+
+            localStorage.setItem('hospitel', JSON.stringify(hospitel));
+            alert('VOTE COMPLETE');
+        }
+    });
+}
+
+</script>

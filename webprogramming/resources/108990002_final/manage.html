@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hospitel Review System</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/raty/3.1.1/jquery.raty.css">
+    </head>
+
+    <body>
+        <div class="container py-5">
+            <h1 class="display-4 mb-5">Hospitel Review System >> Manage</h1>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="btn btn-success" href="add.html">+ ADD</a>
+                    <table class="table table-responsive table-hover" width="100%">
+                        <thead>
+                            <tr>
+                                <th>NAME</th>
+                                <th>RATING</th>
+                                <th>MENU</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <br>
+                    <a class="btn btn-primary" href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raty/3.1.1/jquery.raty.min.js"></script>
+
+<script>
+
+hospitel = localStorage.getItem('hospitel');
+hospitel = JSON.parse(hospitel);
+html = '';
+
+for (i = 0; i < hospitel.length; i++) {
+    html += '<tr>';
+    html += '<td>' + hospitel[i][0] + '</td>';
+    html += '<td><div id="' + hospitel[i][0] + '"></div></td>';
+    html += '<td>';
+    html += '<a class="btn btn-primary" href="update.html?name=' + hospitel[i][0] + '">UPDATE</a>';
+    html += '<a class="btn btn-danger" href="#" onclick="delete_hospitel(\'' + hospitel[i][0] + '\')">DELETE</a>';
+    html += '</td>';
+    html += '</tr>';
+    console.log(hospitel[i]);
+}
+
+$('tbody').html(html);
+
+for (i = 0; i < hospitel.length; i++) {
+    $('#' + hospitel[i][0]).raty({
+        starType: 'i',
+        number: 5,
+        score: hospitel[i][1],
+        readOnly: true
+    });
+}
+
+function delete_hospitel (name) {
+    message = 'Do you really want to delete?\n';
+    message += 'The action cannot be undone.';
+
+    if (confirm(message) == true) {
+        find = 0;
+
+        for (i = 0; i < hospitel.length; i++) {
+            if (hospitel[i][0] == name) {
+                find = i;
+                break;
+            }
+        }
+
+        hospitel.splice(find, 1);
+        localStorage.setItem('hospitel', JSON.stringify(hospitel));
+        window.location.replace('manage.html');
+    }
+}
+
+</script>

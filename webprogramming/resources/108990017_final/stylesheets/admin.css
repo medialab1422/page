@@ -1,0 +1,16 @@
+.color-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.jumbotron{
+    height: 380px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-image: url("../images/3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}

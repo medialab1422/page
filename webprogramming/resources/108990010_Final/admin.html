@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Title</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- bootstrap-select -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <!-- basic.css -->
+    <link rel="stylesheet" href="./stylesheets/basic.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <!-- admin.css -->
+    <link rel="stylesheet" href="./stylesheets/admin.css">
+    <style>
+        #loader {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(to right, #333 0%, #ff0000  200%, #333  100%);
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #loaderNo{
+            align-items: center;
+            justify-content: center;
+        }
+
+        #loaderTitle {
+            width: 1500px;
+            height: 48px;
+            text-align: center;
+            font-size: 50px;
+            color: white;
+        }
+
+        #loaderTitleChild {
+            width: 1500px;
+            height: 250px;
+            text-align: center;
+            font-size: 100px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader">
+        <h1 id="loaderTitle">Not an Admin? Don't wait forever! Not going to load~</h1>
+            <br><br><br><br><br><br><br>
+        <div id="loaderNo">
+            <h2 id = "loaderTitleChild">Loading.......</h2>
+            <br>
+            <h2 id = "loaderTitleChild"><a href="index.html">Click here to go back!</a></h2>
+        </div>
+    </div>
+    <!-- navbar -->
+    <nav id="navbar" class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">Website</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./admin.html">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" href="#signOutModal" href="#">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- header -->
+    <header class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Admin Dashboard</h1>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- section -->
+    <section class="py-4">
+        <div class="container">
+            <nav class="nav nav-pills mb-3">
+                <a class="nav-link active" data-toggle="tab" href="#productList">Product List</a>
+                <a class="nav-link" data-toggle="tab" href="#tagList">Tag List</a>
+            </nav>
+            <div class="tab-content">
+                <!-- productList -->
+                <div id="productList" class="tab-pane active">
+                    <div class="mb-4">
+                        <h2>Product List</h2>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#createProductModal">
+                            Create New Product
+                        </button>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Picture</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Captions</th>
+                                <th>Tags</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="productTableBody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <!-- productList end -->
+                <!-- tagList -->
+                <div id="tagList" class="tab-pane">
+                    <div class="mb-4">
+                        <h2>Tag List</h2>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#createTagModal">Create New
+                            Tag</button>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Color</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tagTableBody">
+                        </tbody>
+                    </table>
+                </div>
+                <!-- tagList end -->
+            </div>
+
+
+        </div>
+    </section>
+    <!-- section end -->
+
+    <!-- footer -->
+    <footer id="footer" class="text-center mt-4">
+        <p>Copy right &copy; 2021</p>
+    </footer>
+    <!-- footer end -->
+
+
+
+    <!-- createProductModal -->
+    <div class="modal fade" id="createProductModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <form id="createProductForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create Product</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div>
+                            <label for="createPostImage" class="btn btn-warning">
+                                <i class="fas fa-images"></i> Upload Image
+                            </label>
+                        </div>
+                        <input type="file" id="createPostImage" class="d-none" accept=".png,.jpg,.jpeg">
+                        <p id="createPostImageURL"></p>
+                        <div id="imagePreview"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="createProductTitle">Movie Title</label>
+                        <input id="createProductTitle" type="text" class="form-control" placeholder="product name..."
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createProductName">Author</label>
+                        <input id="createProductName" type="text" class="form-control" placeholder="product name..."
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createProductTags">Product Tags</label>
+                        <div>
+                            <select id="createProductTags" multiple>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="createProductCaptions">Captions</label>
+                        <input id="createProductCaptions" type="text" class="form-control" min="0" max="100000"
+                            placeholder="Short Captions..." required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- createProductModal end -->
+
+    <!-- updateProductModal -->
+    <div class="modal fade" id="updateProductModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <form id="updateProductForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update Product</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="updateProductId" class="d-none" type="text">
+                        <label for="updateProductTitle">Title</label>
+                        <input id="updateProductTitle" type="text" class="form-control" placeholder="Title..."
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input id="updateProductId" class="d-none" type="text">
+                        <label for="updateProductName">Author</label>
+                        <input id="updateProductName" type="text" class="form-control" placeholder="product name..."
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="updateProductTags">Product Tags</label>
+                        <div>
+                            <select id="updateProductTags" multiple>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="updateProductCaptions">Captions</label>
+                        <input id="updateProductCaptions" type="text" class="form-control" placeholder="product price..." required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- updateProductModal end -->
+
+    <!-- createTagModal -->
+    <div class="modal fade" id="createTagModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <form id="createTagForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create New Tag</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="createTagName">Tag Name</label>
+                        <input id="createTagName" type="text" class="form-control" placeholder="tag name..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createTagColor">Tag Color</label>
+                        <select name="createTagColor" id="createTagColor" class="form-control">
+                            <option value="primary">Blue</option>
+                            <option value="success">Green</option>
+                            <option value="warning">Yellow</option>
+                            <option value="danger">Red</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- createTagModal end -->
+
+    <!-- updateTagModal -->
+    <div class="modal fade" id="updateTagModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <form id="updateTagForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update New Tag</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+
+                        <input id="updateTagId" class="d-none" type="text">
+                        <br>
+                        <label for="updateTagName">Tag Name</label>
+                        <input id="updateTagName" type="text" class="form-control" placeholder="tag name..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="updateTagColor">Tag Color</label>
+                        <select name="updateTagColor" id="updateTagColor" class="form-control">
+                            <option value="primary">Blue</option>
+                            <option value="success">Green</option>
+                            <option value="warning">Yellow</option>
+                            <option value="danger">Red</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- updateTagModal end -->
+
+    <!-- signOutModal -->
+    <div class="modal fade" id="signOutModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div id="signInForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Out</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to log out ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="signOutBtn" class="btn btn-danger">Sign Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signOutModal end -->
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- bootstrap.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+    <!-- bootstrap-select.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <!-- moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!--  Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <!--  Firebase Project Config -->
+    <script src="./javascripts/firebase-config.js"></script>
+    <!-- auth.js -->
+    <script src="./javascripts/auth.js"></script>
+    <!-- admin.js -->
+    <script src="./javascripts/admin.js"></script>
+</body>
+
+</html>

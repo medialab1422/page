@@ -1,0 +1,9 @@
+How to use
+1.First page you will see Login button and register button, Click the register button (green button)
+2.You have to register Username password as admin or user
+2.1.Administrator : Administrator can create,delete or edit list of hospital
+2.2.User: With this position you can rate the hospital lists that the admin has created, but they cannot create, delete, or alter the lists.
+3.Return to the login screen and enter your username and password.
+4.1.As administrator role you have to create list of hospital name
+4.2.As a user role, you must rate the hospital name that the administrator has listed.
+5.Return to the admin role, and after logging in again, you may view the rating that the user has given.

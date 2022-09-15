@@ -1,0 +1,4 @@
+Run the server on your machine
+Once you have the server running in your machine you can just go to localhost.
+In here it is the website itself with all the data already created.
+You can add some reviews if you wish. The reviews will be saved based on your IP and google account.

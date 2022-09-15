@@ -22,14 +22,14 @@ $(document).ready(function () {
         for (let i = 0; i < allData.length; i++) {
             let isSubmitColor = (allData[i].page == "-") ? `style="background-color:#DBA4A4"` : ``;
             let isSubmit = (allData[i].page == "-") ? ` **未繳交作業**` : ``;
-            let page = allData[i].urlpage == 0 ? `./resource/${allData[i].studentID}_final/${allData[i].page}` : `${allData[i].page}`;
+            let page = allData[i].urlpage == 0 ? `./resources/${allData[i].studentID}_final/${allData[i].page}` : `${allData[i].page}`;
 
             let card = `
             <div class="card col-md-6 col-sm-12 mt-1" id="${allData[i].studentID}${allData[i].name}" ` + isSubmitColor + `>
                 <div class="card-body col-md-12">
                   <h5 class="card-title">${allData[i].studentID} ${allData[i].name}` + isSubmit + `</h5>
                     <a href="`+ page + `" class="btn btn-primary m-2" target="_blank">webpage</a>
-                    <a href="./resource/${allData[i].studentID}_final/${allData[i].readme}" class="btn btn-primary m-2" target="_blank">documentation</a>
+                    <a href="./resources/${allData[i].studentID}_final/${allData[i].readme}" class="btn btn-primary m-2" target="_blank">documentation</a>
                  
                     <iframe id="ytplayer" type="text/html" width="100%" height="640"
                     src="https://www.youtube.com/embed/` + allData[i].video + `?autoplay=0"

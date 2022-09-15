@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam - 108990017</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- basic.css -->
+    <link rel="stylesheet" href="./stylesheets/basic.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav id="navbar" class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">TRAVELA</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./home-admin.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./admin.html">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./rating-admin.html">Recommended</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./aboutus-admin.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" href="#signOutModal" href="#">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- header -->
+    <header id="homeHeader" class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">TRAVELA</h1>
+            <p>Travela is the largest travel agent in the world and has received a 5-star certificate as a travel agent. 
+                Travela can provide all your travel needs.
+                Travela has collaborated with thousands of hotels and tourist attractions around the world that will make your trip memorable.</p>
+            <p class="lead">Let's Travelling With Travela!</p>
+        </div>
+    </header>
+    <!-- header end -->
+    <!-- section -->
+    <section class="py-4">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="text-center">Travel Package</h2>
+                <p class="text-center-decs">You can choose which travel package that suitable for you!</p>
+            </div>
+            <!-- productList -->
+            <div id="productList" class="row">
+
+            </div>
+            <!-- productList end -->
+            <br>
+            <br>
+            <br>
+        </div>
+        
+        <div>
+            <div class="why-travela">
+                <br>
+                <p class="text-why mb-4">Why Travela?</p>
+                <ul class="ul-icon">
+                    <li class="li-icon">
+                        <img class="icon" src="./images/shield.png"><br>
+                        <p class="icon-desc">Safe</p>
+                    </li>
+                    <li class="li-icon">
+                        <img class="icon" src="./images/dollar.png"><br>
+                        <p class="icon-desc">Save</p>
+                    </li>
+                    <li class="li-icon">
+                        <img class="icon" src="./images/clock.png"><br>
+                        <p class="icon-desc">Efficient</p>
+                    </li>
+                    <li class="li-icon">
+                        <img class="icon" src="./images/stars.png"><br>
+                        <p class="icon-desc">Trusted</p>
+                    </li>
+                </ul>
+                <br>
+            </div>
+            
+            <div>
+            <br>
+                <p class="text-center mb-4">Our Mission</p>
+                <p class="ourmission">For the past two decades, the person-to-person encounter has been at the heart of Travela's goal. 
+                    We've always done it, and it's more necessary today than ever. We are devoted to providing you with information, 
+                    value, peace of mind, and service to guarantee your next holiday is as precious as your last. It serves as a reminder 
+                    that when you entrust us with your travel arrangements, we take that duty very seriously. Genuine individuals assisting real 
+                    people Every step of the way, I'll be there for you.</p>
+            </div>
+        </div>
+        <br>
+        <br>
+
+
+    </section>
+    <!-- section end -->
+    <!-- footer -->
+    <footer id="footer" class="text-center mt-4">
+        <p>Copy right &copy; 2021 . Ananda Kusnadi . Travela</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- signUpModal -->
+    <div id="signUpModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form id="signUpForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="signUpEmail">Email Address</label>
+                        <input type="email" id="signUpEmail" class="form-control" placeholder="email..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpPassword">Choose Password (min 6 char)</label>
+                        <input type="password" id="signUpPassword" class="form-control" minlength="6"
+                            placeholder="password..." required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="signup" type="submit" class="btn btn-primary">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- signUpModal end -->
+    <!-- signInModal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form id="signInForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="signInEmail">Sign in Email</label>
+                        <input id="signInEmail" type="email" class="form-control" placeholder="email..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signInPassword">Sign in Password</label>
+                        <input id="signInPassword" type="password" class="form-control" minlength="6"
+                            placeholder="password..." required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- signInModal end -->
+    <!-- signOutModal -->
+    <div class="modal fade" id="signOutModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div id="signInForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Out</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to log out ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="signOutBtn" class="btn btn-danger">Sign Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signOutModal end -->
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- bootstrap.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+    <!-- moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!--  Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <!--  Firebase Project Config -->
+    <script src="./javascripts/firebase-config.js"></script>
+    <!-- auth.js -->
+    <script src="./javascripts/auth.js"></script>
+    <!-- main.js -->
+    <script src="./javascripts/main.js"></script>
+</body>
+
+</html>

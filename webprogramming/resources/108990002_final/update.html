@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitel Review System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="display-4 mb-5">Hospitel Review System >> Add</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Add a Hospitel</div>
+                    <form id="createForm" class="card-body">
+                        <div class="form-group">
+                            <label for="">NAME</label>
+                            <input id="name" type="text" class="form-control" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <a class="btn btn-primary" onclick="update()">UPDATE</a>
+                            <a class="btn btn-danger" href="manage.html">CANCEL</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+<script>
+
+var urlParams = new URLSearchParams(window.location.search);
+var name = urlParams.get('name'); 
+$('#name').val(name);
+old_name = name;
+
+function update () {
+    name = $('#name').val();
+    hospitel = localStorage.getItem('hospitel');
+    hospitel = JSON.parse(hospitel);
+
+    for (i = 0; i < hospitel.length; i++) {
+        if (hospitel[i][0] == old_name) {
+            hospitel[i][0] = $('#name').val();
+            break;
+        }
+    }
+
+    localStorage.setItem('hospitel', JSON.stringify(hospitel));
+    window.location.replace('manage.html');
+}
+
+</script>
