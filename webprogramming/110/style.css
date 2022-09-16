@@ -1,0 +1,25 @@
+body {
+    background-color: #222831 !important;
+    padding-top: 70px;
+    border: 0;
+    padding: 70 0 0 0;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+section {
+    background-color: #222831;
+    color: #EEEEEE;
+}
+
+nav {
+    color: #EEEEEE;
+    /* background-color: #00ADB5;*/
+}
