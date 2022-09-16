@@ -10,6 +10,7 @@ $(document).ready(function () {
                 readme: parsedCSV[i][3],
                 video: parsedCSV[i][4],
                 urlpage: parsedCSV[i][5],
+                score: parsedCSV[i][6],
             }
             allData.push(data)
         }
@@ -28,7 +29,7 @@ $(document).ready(function () {
             let card = `
             <div class="card col-md-6 col-sm-12 mt-1 `+ isSubmit + `" id="${allData[i].studentID}${allData[i].name}>
                 <div class="card-body col-md-12">
-                  <p class="card-title" style="font-size:large;font-weight:bold;">${i + 1 + ". " + allData[i].studentID} ${allData[i].name[0] + "O" + allData[i].name[2]} </p>
+                  <p class="card-title" style="font-size:large;font-weight:bold;">${i + 1 + ". " + allData[i].studentID} ${allData[i].name[0] + "O" + allData[i].name[2]} ${" ..."+allData[i].score}</p>
                     <a href="`+ page + `" class="btn btn-primary m-2 ` + disablePageBtn + `" target="_blank" >webpage</a>
                     <a href="https://media.githubusercontent.com/media/medialab1422/page/main/webprogramming/resources/${allData[i].studentID}_final/${allData[i].studentID}_final.pdf" class="btn btn-success m-2 ` + disableDocBtn + `" target="_blank">documentation</a>
                     
