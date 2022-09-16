@@ -20,20 +20,64 @@ $(document).ready(function () {
     function ShowCard() {
 
         for (let i = 0; i < allData.length; i++) {
-            let isSubmitColor = (allData[i].page == "-") ? `style="background-color:#DBA4A4"` : ``;
-            let isSubmit = (allData[i].page == "-") ? ` **未繳交作業**` : ``;
+            let isSubmitColor = (allData[i].page == "-") ? `ff0000` : `B2B1B9`;
             let page = allData[i].urlpage == 0 ? `./resources/${allData[i].studentID}_final/${allData[i].page}` : `${allData[i].page}`;
-            let documentationBtn = allData[i].urlpage == 0 ?``: `<a href="https://media.githubusercontent.com/media/medialab1422/page/main/webprogramming/resources/${allData[i].studentID}_final/${allData[i].studentID}_final.pdf" class="btn btn-primary m-2" target="_blank">documentation</a>`;
-
+            let disablePageBtn = (allData[i].page == "-") ? `disabled` : ``;
+            let disableDocBtn = allData[i].readme == 1 ?``: `disabled`;
+          
             let card = `
-            <div class="card col-md-6 col-sm-12 mt-1" id="${allData[i].studentID}${allData[i].name}" ` + isSubmitColor + `>
+            <div class="card col-md-6 col-sm-12 mt-1" id="${allData[i].studentID}${allData[i].name}" style="background-color:#` + isSubmitColor + `">
                 <div class="card-body col-md-12">
-                  <h5 class="card-title">${allData[i].studentID} ${allData[i].name}` + isSubmit + `</h5>
-                    <a href="`+ page + `" class="btn btn-primary m-2" target="_blank">webpage</a>
-                    ` + documentationBtn + `
-                    <iframe id="ytplayer" type="text/html" width="100%" height="640"
-                    src="https://www.youtube.com/embed/` + allData[i].video + `?autoplay=0"
-                    frameborder="0"></iframe>
+                  <p class="card-title" style="font-size:large;font-weight:bold;">${i+1 +". " +  allData[i].studentID} ${allData[i].name[0]+"O"+allData[i].name[2]} </p>
+                    <a href="`+ page + `" class="btn btn-primary m-2 `+disablePageBtn+`" target="_blank" >webpage</a>
+                    <a href="https://media.githubusercontent.com/media/medialab1422/page/main/webprogramming/resources/${allData[i].studentID}_final/${allData[i].studentID}_final.pdf" class="btn btn-success m-2 ` + disableDocBtn + `" target="_blank">documentation</a>
+                    
+                    <iframe 
+                    style=" top: 0; left:0; width: 100%; height: 640px; border: 0;"
+                    loading="lazy";
+                    srcdoc="<style>
+                      * {
+                      padding: 0;
+                      margin: 0;
+                      overflow: hidden;
+                      }
+                      
+                      body, html {
+                        height: 100%;
+                        background-color:black;
+                      }
+                      
+                      img, svg {
+                        position: absolute;
+                        width: 100%;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                      }
+                      
+                      svg {
+                        filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+                        transition: all 250ms ease-in-out;
+                      }
+                      
+                      body:hover svg {
+                        filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+                        transform: scale(1.2);
+                      }
+                    </style>
+                    <a href='https://www.youtube.com/embed/${allData[i].video}?autoplay=1'>
+                      <img src='https://img.youtube.com/vi/${allData[i].video}/hqdefault.jpg' alt='Coffee Recipe Javascript Project' >
+                      <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+                    </a>
+                    "
+                    src="https://www.youtube.com/embed/${allData[i].video}" 
+                    title="Coffee Recipe Javascript Project"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                  </iframe>
+
+
               </div>
                 </div>
 
@@ -41,7 +85,6 @@ $(document).ready(function () {
             `
 
             $("#card-group").append(card)
-            // if (allData[i + 1].page == "") { break; }
         }
 
         function isInt(value) {
