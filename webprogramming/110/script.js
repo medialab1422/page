@@ -20,16 +20,16 @@ $(document).ready(function () {
     function ShowCard() {
 
         for (let i = 0; i < allData.length; i++) {
-            let isSubmitColor = (allData[i].page == "-") ? `ff0000` : `B2B1B9`;
             let page = allData[i].urlpage == 0 ? `./resources/${allData[i].studentID}_final/${allData[i].page}` : `${allData[i].page}`;
             let disablePageBtn = (allData[i].page == "-") ? `disabled` : ``;
-            let disableDocBtn = allData[i].readme == 1 ?``: `disabled`;
-          
+            let disableDocBtn = allData[i].readme == 1 ? `` : `disabled`;
+            let isSubmit = (allData[i].page == "-") ? `disabled` : ``;
+
             let card = `
-            <div class="card col-md-6 col-sm-12 mt-1" id="${allData[i].studentID}${allData[i].name}" style="background-color:#` + isSubmitColor + `">
+            <div class="card col-md-6 col-sm-12 mt-1 `+ isSubmit + `" id="${allData[i].studentID}${allData[i].name}>
                 <div class="card-body col-md-12">
-                  <p class="card-title" style="font-size:large;font-weight:bold;">${i+1 +". " +  allData[i].studentID} ${allData[i].name[0]+"O"+allData[i].name[2]} </p>
-                    <a href="`+ page + `" class="btn btn-primary m-2 `+disablePageBtn+`" target="_blank" >webpage</a>
+                  <p class="card-title" style="font-size:large;font-weight:bold;">${i + 1 + ". " + allData[i].studentID} ${allData[i].name[0] + "O" + allData[i].name[2]} </p>
+                    <a href="`+ page + `" class="btn btn-primary m-2 ` + disablePageBtn + `" target="_blank" >webpage</a>
                     <a href="https://media.githubusercontent.com/media/medialab1422/page/main/webprogramming/resources/${allData[i].studentID}_final/${allData[i].studentID}_final.pdf" class="btn btn-success m-2 ` + disableDocBtn + `" target="_blank">documentation</a>
                     
                     <iframe 
