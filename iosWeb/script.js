@@ -1,4 +1,5 @@
 var year = []
+var term = []
 var allData = []
 var currentYear = null;
 $(document).ready(function () {
@@ -16,10 +17,13 @@ $(document).ready(function () {
         var parsedCSV = d3.csv.parseRows(data)
 
         var current_year = ""
+        var _term = ""
         for (var i = 0; i < parsedCSV.length; i++) {
             if (parsedCSV[i][0] == "year") {
                 current_year = parsedCSV[i][1]
+                _term = parsedCSV[i][2]
                 year.push(current_year);
+                term.push(_term);
                 continue
             }
 
@@ -35,7 +39,7 @@ $(document).ready(function () {
         }
 
         SetDropDown()
-        ShowYearDemo(year[year.length - 1])
+        ShowYearDemo(year[year.length - 1],_term)
     })
 })
 
@@ -48,9 +52,11 @@ function randomColor() {
 }
 
 function SetDropDown() {
-    for (var i = 0; i < year.length; i++) {
+    for (var i = year.length - 1; i >= 0; i--) {
+        console.log(term)
         var dropDownHtml =
-            `<button onclick="UpdateYearDropDown(` + year[i] + `)" data-offset="-140">` + year[i] + `學年度</button>`
+            `<button onclick="UpdateYearDropDown(` + year[i] + `,` + term[i] + `)" data-offset="-140">` + year[i] + `學年度`
+        dropDownHtml = term[i] == '1' ? dropDownHtml + `（期中）</button>` : dropDownHtml + `</button>`
         $("#yearDropdown").append(dropDownHtml)
     }
 }
@@ -65,10 +71,10 @@ function HideDropDown() {
     }
 }
 
-function UpdateYearDropDown(year) {
+function UpdateYearDropDown(year, _term) {
     HideDropDown()
     scrolltoID("about", 0)
-    ShowYearDemo(year)
+    ShowYearDemo(year, _term)
     scrolltoID("portfolio", 500)
 }
 
@@ -77,14 +83,14 @@ function UpdateGroupDropDown(group) {
     scrolltoID(group, 500, -$("#nav").outerHeight())
 }
 
-function ShowYearDemo(current_year) {
+function ShowYearDemo(current_year, _term) {
     currentYear = current_year
     $("#demo").html(current_year + "學年度 " + `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
     class="bi bi-caret-down-fill" viewBox="0 0 16 16">
     <path
         d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
 </svg>`)
-    $("#title").html("作業DEMO - " + current_year + "學年度")
+    $("#title").html("作業DEMO - " + current_year + "學年度" + (_term == '1' ? "（期中）" : ""))
     $("#portfolioContainer").empty()
     $("#groupDropdown").empty()
     for (var i = 0; i < allData.length; i++) {
@@ -168,7 +174,7 @@ function ShowYearDemo(current_year) {
 }
 
 function isPDF(name, title) {
-    return name == "" ? "" :"view pdf： " + title + ".pdf"
+    return name == "" ? "" : "view pdf： " + title + ".pdf"
 }
 
 function scrolltoID(id, speed = 800, offset = 0) {
