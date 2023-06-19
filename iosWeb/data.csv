@@ -1,4 +1,4 @@
-year,102,2,
+year,102,final,
 1_FacebookAnalysis,LsmBjzD1VfU,,我們決定製作一個Facebook分析器，讓Facebook使用者能透過我們的App來看出誰最關注自己？誰最愛評論？並且誰最喜歡發照片並Tag自己，這些資訊都可以顯示在我們的App上，如此一來使用者就可以只要登入，輕易的可以擷取Facebook上的資訊，讓他了解到自己的交友狀態。另外提供小遊戲，自己選擇被Tag過的照片，遊玩拼圖遊戲，讓這個App多元化提供一些資訊與小娛樂，遊戲內可調整難度以及切割格數，讓各種不同的使用者來玩，並且圖片為Facebook內的照片，簡單又有趣！
 2_i玩客,VUI7xm8opc4,,app 針對一天的旅遊行程記錄，做基本的規劃。其中在旅遊的過 程中可以隨手將心情寫照或是風景利用拍照等等方式記錄下來，另外拍照時 我們還加入了黑白濾鏡的功能。使用者可在旅遊前可以先估計預算，在旅遊 當中有任何消費行為時也可以隨時記帳，方便使用者查看目前花費是否超過 預算，也可以觀察當下目地的的氣溫。
 3_Liao Pei Pad,KT14x-BeyWM,,想要有一個Midi pad，但是價格不斐，於是自己寫了一個類似Midi pad的APP，可以點擊按鍵彈奏音樂、也可以設定持續撥放，也可以用編輯模式設定按鍵對應的歌曲，讓你也可以成為一個DJ。
@@ -14,7 +14,7 @@ year,102,2,
 13_QuickClock,wm7e5x6sUoM,,可以設定多個鬧鐘時間，並設定開/關，以及幫此鬧鐘時間命名，設定好後會抓取日期時間，紀錄日期時間，判定是否到達時間，最後響鈴提醒。
 14_JumpingJake,lxRlt0kCIgw,,利用手勢點擊畫面任何地方使人物跳躍，閃過障礙，可選各種關卡地圖，有冰雪、熔岩、糖果、山脈等等地圖，撞擊到障礙物和畫面上下邊緣就會遊戲結束，結束時會紀錄遊戲分數。
 15_lights out,GBRvJ7N_tVE,,製作一個需要意志力與益智的開關燈小遊戲，開始時可選擇不同大小的大樓，來決定遊玩時的難度。 當選定難度後，畫面將會出現不同數量的房間，當開關一個房間的電燈時，其樓上下與左右將會跟著改變開關狀態，將整棟大樓的燈全部關掉時，即完成遊戲，遊戲完成時將會列出開關次數與花費時間並會記錄最佳成績，此外，我們擁有設定選項可以切換主題的佈景與音樂，以及開關是否靜音。
-year,103,2,
+year,103,final,
 1_AMau,97eziUMHW4s,,在 2013 年九把刀拍攝了一部電影“十二夜”，社會上漸漸開始關心流浪動物 的議題。在網路上有許多的網站提供想要領養動物的人瀏覽。但是平常在瀏覽 網站時，我們也許會利用到滾輪快速瀏覽，一個不小心瀏覽快就會忽略掉細節 的部分。在我們所設計的 AMau 中，我們利用到卡片堆的方式，讓使用者能夠 一一瀏覽所有小貓的資訊。
 2_MyTravel,dW8V2ieThYk,,一個人在旅行時，能夠方便紀錄自己所購買的物品的APP，能夠記錄多個行程、 設定行程類別、設定匯率、自動轉換匯率、統計金額、以圖表方式顯示各類別的金額比例。
 3_GodofTower,GuqegKn5KEA,,基於神魔之塔卡片進化時，常因 背包容量有限，不能堆放過多進化素材，因此設計能根據想要進化的卡片，統計所需素材的應用程式。
@@ -36,7 +36,7 @@ year,103,2,
 19_VoiceRecorder,XMPItitZbsU,,製作一個有關聲音處理的APP，讓使用者在戶外教學或課堂時可以使用APP的大聲公(放大聲音)、聲音錄製與播放等等功能。
 20_Four newspapers,U_j9FZI-lrA,,讓不想繁瑣的查詢網路新聞，且又不想買報紙的使用者可以使用此APP快速瀏覽國家大事。
 21_iCards,zSlyN8hqpCc,,這個構想來自於高中時期，這個時期開始大量背誦英文單字、片語等，常常會買一個小卡，將單字英文中文， 分別寫在在卡片正反面，利用各個零碎片段，將小卡片拿出來背誦，隨著科技的發展，我們可以藉由每天形影不離的手機來取代， 因此，我們建構了一個App，可以完全的將小卡所扮演的功能充分表現，讓使用者隨時隨地，可以打開自己的單字庫， 將這些單字慢慢地轉換的我們大腦的記憶區，我們稱之為iCards。
-year,104,2,
+year,104,final,
 1_哀居,IZtr7ibbOgE,,提供區域的資訊包括懸浮微粒、房價等等資訊，並提供貼文分享平台。
 2_Whisper,XW2q-bXQ7XU,,近年來通訊應用程式日益普及，而通訊上除了透過Wi-Fi外，最重要的就是3G網路，但隨著擁有行動裝置的年齡層降低，不是每個人年齡層都負擔的起網路費，因此本APP透過藍芽將能讓距離教為接近的人，能夠互相通訊聊天，最適合在教室裡偷玩手機的學生族群。
 3_MyDrawing,KXbFclZM08I,,一個簡單的繪圖板，可以選擇不同顏色、筆觸來繪畫，並將內容存成圖片，且可藉由藍芽來分享繪圖。
@@ -51,7 +51,7 @@ year,104,2,
 12_Friend Balls,UhiKnqKzIIw,,我們參考Tsum Tsum這款手機遊戲的玩法並加上社交與惡搞元素，利用朋友照片創造出獨一無二的人物球，使玩家能夠使用朋友球進行遊戲，增加樂趣。
 13_Sudoku,Wa-WMQOd9zM,,由於紙本數獨會造成浪費紙張，且有錯誤修改不易，加上檢查答案費時費力，另外計時也很麻煩，透過手機遊戲來改善傳統數獨的諸多不便。
 14_傳染疾病知識家,fFYJWIRZrIQ,,建立一個疾病知識庫，可以選擇要查詢的疾病項目，方便提供民眾查詢。
-year,105,2,
+year,105,final,
 1_Instagram clone,OlQxRuhQHqU,,"實作一Instagram基本功能的App, 它有以下功能：1.使用email作為username註冊與登入 2.上傳相片與相片描述 3.追蹤其他使用者 4.對相片做評論 5.下拉更新"
 2_Good Price,X0aPlkpYKus,,這是一個方便網路購物比價的應用程式，使用者可以輸入關鍵字去搜尋價錢，它會依照價錢或相關性做排序。
 3_地圖記事本,,,使用者可以設定自己的資料，也有加入好友的功能。在查看地圖時點選欲查看的地點可以看見該地點的詳細資訊，選擇空的區域可以新增記事及特色照片，此外有歷史紀錄的功能，可顯示所有朋友去過的地方。
@@ -65,7 +65,7 @@ year,105,2,
 11_HyPro TH,qeEV_CqAK58,,此應用程式可與指定的溫溼度感測裝置進行連接並讀取當下的紀錄值。可藉由藍芽搜尋附近的相同型號裝置。一個UIView用來顯示圖表與下載的紀錄繪圖。藉由讀取到的裝置於ChartView上進行繪製圖表。(即時)可暫停資料下載並於恢復時繼續繪圖。兩個Lable顯示讀取到的溫度與濕度。圖表支援手勢控制進行縮放拖曳。手動輸入警戒值於圖表上。一鍵清除畫面。適用於Iphone；IOS10以上使用者。
 12_Lunarrator,R3b9vNbw69U,,結合記事本與農曆的記事APP。
 13_Day Note,1A-bqsp_Pxg,,1.時間軸– 以時間軸的方式呈現每日日記 2.新增日記– 手動新增屬於自己的日記 3.相片牆– 可以從相片牆查閱日記 4.標題搜索– 可以搜索標題、地點，方便尋找回憶 5.分享– 分享給朋友自己的想法
-year,106,2,
+year,106,final,
 1_點餐系統_L.A.T,CyzjduSz1H8,,我們為了以後發展的空間，例如ERP系統的呈現先以點餐系統基本的操作為先驅。
 2_唯記,kXx_qt13HUE,,這是一款隨手記錄你生活旅行的App，它可以記錄在臺灣你的旅行足跡。當你每到一個縣市遊玩、居住亦或是路過時，你都可以相對應的進行標記，不同的點標對應著你不同的經歷，記錄著你走過的足跡。當選擇重置鍵的時候，可以把點標去除。
 3_「快好記」記帳APP,Qb3SqHI-x8c,,"本應用程式有以下功能：新增收入或支出紀錄、每一筆交易都提供照片與備註(可選)、顯示交易紀錄的總表、顯示單筆交易紀錄詳細資訊的頁面、統計目前餘額,平均支出及最大支出頁面、刪除收入或支出紀錄。"
@@ -77,7 +77,7 @@ year,106,2,
 9_Week Plan,WrphyJPAEKg,,建立一個『週計畫』app
 10_訂餐系統,qCH3hmI9nkk,,在百貨公司美食街或是學餐，往往都需要先找到位子後與朋友輪流到各個櫃檯看菜單，既耗時也不易快速知道所有櫃檯的菜單，所以開發一個可以讓顧客只需找到位子，並且在位子上就能看到所有櫃檯的菜單，在位子上就能點餐，以手機震動及提示訊息作為叫號裝置，取代在百貨公司的震動裝置。
 11_CHEESE TRAP,Joo8f-n8zSs,,簡單好上手的打磚塊遊戲。
-year,107,2,
+year,107,final,
 1_小綠編輯器,1e_OKgOsQXw,,一款根據檔案系統開發的文本編輯器軟件，幫助使用者快速的添加文本、查找文本、儲存文本，並且操作簡單，界面美觀，適合平時生活中的使用。
 2_記帳小幫手,Ueb2Eaa9RRc,,幫助記帳的App，可紀錄商品名稱、購買日期、購買金額等項目，並可做記帳清單的統計整理。
 3_Room Mate,1qDTZhicGnQ,,在現在科技冷漠的時代，通常很難遇到在外租屋的室友，室友們可藉由此App，共同溝通並留言解決生活大小事。
@@ -92,7 +92,7 @@ year,107,2,
 12_記帳系統,1L977P8Fazk,,一個記帳App，可簡單紀錄生活大小支出與統計。
 13_逗貓大作戰,7VqiTdiEDaE,,一款輕鬆的乒乓遊戲，可選擇Easy、Medium、Hard三種難度，以及雙人模式。
 14_Forex,0novnjqQAo0,,Forex主要用於外匯走勢與模擬交易之預測，利用機器學習搭配伺服器後端，使用者僅需要調整幾項設定便能取得外匯走勢預測結果與模擬教義預測之獲利。
-year,109,2,
+year,109,final,
 1_iBand,scJ0Z3wfR8Q,,We love music! We want to customize a music player.
 2_Noveler,MWzVWHJfRfg,,很多時候在閱讀完一本書時可能過了幾年就忘了自己是否讀過，所以想用APP記錄下來。
 3_AI瘦身,t3_byYQDepQ,,"1.姿勢預測 →轉換卡路里(AR-Kit)<br>2.易中難三種運動類型<br>3.運動語音提示(TTS)<br>4.圖表紀錄：a.體重變化&nbsp;b.卡路里消耗&nbsp;c.日曆<br>5.推播通知<br>6.背景音樂<br>7.支持iphone與ipad<br>8.本地資料庫，支持離線運作(Core Data)
@@ -112,7 +112,7 @@ about the country I focused on"
 13_Food Rabbit game,byB5yo8u070,,■ 這是一個殺時間的小遊戲<br>■ 協助立志要當上外送員的兔子Pekora完成訂單任務<br>■ 此遊戲不僅要完整的採買好所有東西，而且還要在時間內完成才會過關
 14_防疫日記,-PV8ahhsfF8,,可以清楚地記錄行蹤，在疫情爆發波及到使用者時，方便追朔
 15_Re:minder,gn_GISF-xZs,,"● Save and Load data<br>Data storage, saving the datas to keep the state of each users on their local device, loading the datas to display on the UI view.<br>● Display by Card<br>Cards display in the lists. Each card shows a to-do thing for the <br>user. This is much easier to separate from each task.<br>● Auto Notification<br>Users are able to set a time. App will send notifications on their lock screen, notification and banner.<br>● Sharing<br>Share your to-do thing with friends. It’s really helpful for the team and kind for those who used to check the calendar."
-year,110,2,
+year,110,final,
 1_SHAKYA,z2r_9JMYKrA,110/1,<br>透過Google帳號登入ＡＰＰ<br>發佈⽂章<br>⽂章可按讚留⾔檢舉<br>新增好友<br>與好友聊天<br>修改個⼈資料
 2_EaseChat,I263u_xgjC8,110/2,<br>○ Simple log-in and sign-up<br>○ One-to-one chat<br>○ Real-time text transmission<br>○ Easy for multitasking<br>○ Operating at any time and from any location using WiFi or cellular networks
 3_SuSuSudoku,BOH4kjHBRaA,110/3,<br>1. 開始⼀個 n x n 格的數獨遊戲 (n = 9)<br>2. 遊玩途中可以暫停、繼續遊戲<br>3. 可以在空格中填入筆記，紀錄可能為答案的數字<br>4. 每⼀局提供 3 次提⽰，直接提供那⼀格的答案給玩家<br>5. 提交答案前，可以修改任何空格裡的數字<br>6. 遊戲過程中會計時，送出答案並驗證正確後，可以紀錄所花時間⾄計分板<br>
@@ -128,7 +128,7 @@ year,110,2,
 14_北科小蝦皮,cOfqCNGT1uc,110/14,<br>1. 分類頁面搜尋特定類別的商品<br>2. 首頁顯示熱門商品及推薦商品<br>3. 購物車頁面顯示加入購物車的商品，可以刪減商品，或是結帳<br>4. 關鍵字查詢想要的商品<br>5. 會員中心顯示自己的消費紀錄<br>6. 查看及修改自己的帳戶資料
 15_EasyChat,s30qPZc92cs,110/15,<br>市面上有許多方便好用，來⾃不同社群網站或公司所做聊天軟體，都各有特色且功能強大，但是許多聊天軟體除了主要的聊天功能外往往都會有許多其他額外的功能，所以我希望能夠針對「聊天」這個主軸來設計一款專注在聊天相關的功能上的應⽤程式。
 16_HTTP CLIENT,kW1g1WvbLh4,110/16,<br>• Can send a http request<br>• Can set param in request<br>• Can save recent use or favorite<br>• Show what response got
-year,111,1,
+year,111,mid,
 111318064 犀牛盾App,kQH0HY-9h-k,,RHINOSHIELD 犀牛盾是一個享有盛譽的領先手機防護配件品牌，許多人都有透過網路商店購買過他們的產品。然而，就我所了解，犀牛盾目前尚未推出專屬於他們的商店應用程式。為了彌補這一缺憾，我開發了一款犀牛盾APP，讓用戶能夠輕鬆選購心儀的商品，提供便利的購物體驗。RHINOSHIELD 犀牛盾是一個享有盛譽的領先手機防護配件品牌，許多人都有透過網路商店購買過他們的產品。然而，就我所了解，犀牛盾目前尚未推出專屬於他們的商店應用程式。為了彌補這一缺憾，我開發了一款犀牛盾APP，讓用戶能夠輕鬆選購心儀的商品，提供便利的購物體驗。
 111598083 照片修改功能APP,DVAluyUhzds,,可透過email  及密碼 建立個人帳號，並於登入後，透過可開啟相簿，或是檢視列表所讀取之firebase中相片資料，來選取單一照片資料載入app暫存。<br>載入後之相片資料可上傳為新名稱相片，亦可選擇進入畫布介面進行修改，目前可修改功能包括：圖片尺寸縮放、整張圖片改變位置<br>尺寸縮放由按鈕控制，而改變位置則是由手勢拖移操作，更改後之圖片經按鈕決定儲存後，系統會自動回到圖片上傳/下載介面顯示該圖片，可對該圖片進行上傳或是再回到畫布編輯。
 111598084 LabPal,kxMH56XTSKc,111-mid/111598084,『LabPal研究好夥伴』是一個實驗室資訊整合的應用程式，旨在為研究團隊提供便捷的協作和資訊管理工具。這個應用程式結合了多項實用功能，使研究團隊能夠更有效地進行研究工作。
@@ -145,3 +145,30 @@ year,111,1,
 揮產業效益。⽬前功能包含：註冊、登⼊、練團室⼀覽、預約功能
 （可選擇時間及練團室種類）。未來擴充可增加地區篩選、價格篩選
 等功能。"
+year,111,final,
+1_ANIMALIA EXPLORER,AO5H9BjnOaw,111-final/1,"我們的APP旨在增進使用者對動物的認知和理解。通常，我們只知道動物的名字和大致的長相，對牠們的種類和特性缺乏深入了解。為了解決這個問題，我們開發了這款動物識別的APP，並結合OpenAI的API ，讓使用者可以透過互動的方式獲得更多的相關資訊。此外，我們還融入了虛擬實境技術，可以將虛擬的動物實際放在現實的生活中，讓使用者在家中也能輕鬆建造屬於自己的動物園。
+"
+2 DJ Box,aEWFJaKn5FE,111-final/2,"DJ Box 介紹<br>
+·選擇音樂風格 - 根據使用者喜好、需要場合等推薦適合歌單。<br>
+·智能歌單 - 根據使用者提供的條件推送最合適的歌單。<br>
+·替換歌曲 - 若使用者不滿歌單中的曲目可要求系統替換。<br>
+·跨平台播放 - 可以在 Youtube上播放DJ Box 生成的歌單。<br>
+·分享歌單 - 可以將歌單分享給其他使用者。<br>
+·個人歌單 - 可以將喜歡的歌單或歌曲收藏至個人歌單中。"
+3 FaceHunterDemo,aybTO8acDZg,111-final/3,"FaceHunter 是一款自動偵測臉部位置來進行挑戰的遊戲 App，蒐集了
+「FaceOn」與「PushUp」兩款遊戲。FaceOn 會隨機變換安全範圍位置，
+玩家必須在時限內將自己的臉部放置在安全範圍，藉此得分。而 PushUp
+要求玩家以伏地挺身姿態遊玩，藉由偵測伏地挺身時的臉部高度，限制
+玩家要在特定時間以特定高度進行運動。整體而言，FaceHunter 是一款
+自由的運動 App，可以讓人隨時隨地與朋友來場競賽。"
+4 AR推箱遊戲,SovLYTcIgcc,111-final/4,"ABOUT THIS PROJECT<br>
+·Firebase<br>We use firebase to store every user's final score, so each player has to create an account.<br>
+·ARKit<br>When the game starts, it will load the maze model and use button to control the box and try to solve the maze.<br>
+·Timer<br>We use timer to record the finish time of the game."
+5 Kua Kua Delivery | 呱呱 外送,eV0RojX_XaI,111-final/5,"App功能介紹：<br>
+• 利⽤ＡＲ技術來觀看產品實際樣⼦<br>
+• 表情情緒辨別（face detection）<br>
+• 上傳圖片可以判斷使⽤者需要購買什麼樣的產品<br>
+• 客⼾註冊登入登出功能<br>
+• 商品購物功能
+"

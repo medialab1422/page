@@ -2,6 +2,7 @@ var year = []
 var term = []
 var allData = []
 var currentYear = null;
+var currentTerm = null;
 $(document).ready(function () {
     $(document).on("scroll", function () {
         secondPage = $("nav li:nth-child(2) a").attr("href")
@@ -29,6 +30,7 @@ $(document).ready(function () {
 
             var data = {
                 year: current_year,
+                yearterm: _term,
                 title: parsedCSV[i][0],
                 video: parsedCSV[i][1],
                 pdf: parsedCSV[i][2],
@@ -39,7 +41,7 @@ $(document).ready(function () {
         }
 
         SetDropDown()
-        ShowYearDemo(year[year.length - 1],_term)
+        ShowYearDemo(year[year.length - 1], _term)
     })
 })
 
@@ -53,10 +55,9 @@ function randomColor() {
 
 function SetDropDown() {
     for (var i = year.length - 1; i >= 0; i--) {
-        console.log(term)
         var dropDownHtml =
-            `<button onclick="UpdateYearDropDown(` + year[i] + `,` + term[i] + `)" data-offset="-140">` + year[i] + `學年度`
-        dropDownHtml = term[i] == '1' ? dropDownHtml + `（期中）</button>` : dropDownHtml + `</button>`
+            `<button onclick="UpdateYearDropDown(` + year[i] + `,'` + term[i] + `')" data-offset="-140">` + year[i] + `學年度`
+        dropDownHtml = term[i] == "mid" ? dropDownHtml + `（期中）</button>` : dropDownHtml + `</button>`
         $("#yearDropdown").append(dropDownHtml)
     }
 }
@@ -85,17 +86,17 @@ function UpdateGroupDropDown(group) {
 
 function ShowYearDemo(current_year, _term) {
     currentYear = current_year
+    currentTerm = _term
     $("#demo").html(current_year + "學年度 " + `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
     class="bi bi-caret-down-fill" viewBox="0 0 16 16">
     <path
         d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
 </svg>`)
-    $("#title").html("作業DEMO - " + current_year + "學年度" + (_term == '1' ? "（期中）" : ""))
+    $("#title").html("作業DEMO - " + current_year + "學年度" + (_term == "mid" ? "（期中）" : ""))
     $("#portfolioContainer").empty()
     $("#groupDropdown").empty()
     for (var i = 0; i < allData.length; i++) {
-        var index = 0;
-        if (allData[i].year == current_year) {
+        if (allData[i].year == current_year && allData[i].yearterm == _term) {
             var sectionHtml = `
                 <div id="` + i + `" class="overlay reveal " style="background-color:` + randomColor() + `">
                     <h4 class="heading">` + allData[i].title + `</h4>
@@ -208,7 +209,7 @@ document.body.onscroll = function () {
 </svg> `
 
     for (var i = allData.length - 1; i >= 0; i--) {
-        if (allData[i].year == currentYear) {
+        if (allData[i].year == currentYear && allData[i].term == currentTerm) {
             if (document.documentElement.scrollTop > $("#" + i).offset().top - 250) {
                 $("#group").html(allData[i].title + icon)
                 isIngroup = true;
