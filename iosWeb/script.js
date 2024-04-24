@@ -98,7 +98,7 @@ function ShowYearDemo(current_year, _term) {
     for (var i = 0; i < allData.length; i++) {
         if (allData[i].year == current_year && allData[i].yearterm == _term) {
             var sectionHtml = `
-                <div id="` + i + `" class="overlay reveal " style="background-color:` + randomColor() + `">
+                <div id="` + i + `" class="overlay reveal " style="border-radius: 30px;background-color:` + randomColor() + `">
                     <h4 class="heading">` + allData[i].title + `</h4>
                     <iframe 
                     style=" top: 0; left:0; width: 100%; height: 640px; border: 0;"
