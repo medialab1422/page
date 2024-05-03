@@ -597,12 +597,6 @@ h1 .logo {
     padding-bottom: 5%;
 }
 
-#about .info {
-    font-weight: bolder;
-    display: flex;
-    flex-direction: row;
-}
-
 #about h2 {
     color: #0d2435;
 }
@@ -611,17 +605,7 @@ h1 .logo {
     border-bottom: 2px dashed #918d8d;
 }
 
-#about .info p {
-    line-height: 270%;
-}
 
-#about .signature {
-    font-family: "Brush Script MT", cursive;
-    font-size: 150%;
-    float: right;
-    color: #0d2435;
-    opacity: 0.9;
-}
 
 #skill-set {
     margin-top: 80px;
