@@ -27,7 +27,7 @@ $(document).ready(function () {
 					<object 
 					style=" top: 0; left:0; width: 100%; height: 640px; border: 0;"
 					loading="lazy";
-					data="./resources/${allData[i].GroupID}/proposal.pdf" 
+					data="${allData[i].PdfURL}" 
 					title="Embedded PDF Viewer"
 					>
 						<p>
