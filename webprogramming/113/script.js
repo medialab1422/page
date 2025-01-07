@@ -24,18 +24,16 @@ $(document).ready(function () {
                     <a href="${allData[i].PdfURL}" class="btn btn-success m-2" target="_blank">Proposal PDF</a>
                     
 					
-					<iframe 
+					<object 
 					style=" top: 0; left:0; width: 100%; height: 640px; border: 0;"
 					loading="lazy";
-					src="./resources/${allData[i].GroupID}/proposal.pdf" 
+					data="./resources/${allData[i].GroupID}/proposal.pdf" 
 					title="Embedded PDF Viewer"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					>
 						<p>
 							Your browser does not support PDFs.
 						</p>
-					</iframe>
+					</object>
 
 
 				</div>
