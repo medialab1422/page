@@ -20,13 +20,13 @@ $(document).ready(function () {
             <div class="card col-md-6 col-sm-12 mt-1" id="${allData[i].GroupID}">
                 <div class="card-body col-md-12">
                   <p class="card-title" style="font-size:large;font-weight:bold;">${i + 1 + ". " + allData[i].GroupID}</p>
-                    <a href="https://github.com/medialab1422/page/main/webprogramming/113/resources/${allData[i].GroupID}/proposal.pdf" class="btn btn-success m-2" target="_blank">Proposal PDF</a>
+                    <a href="./113/resources/${allData[i].GroupID}/proposal.pdf" class="btn btn-success m-2" target="_blank">Proposal PDF</a>
                     
 					
 					<iframe 
 					style=" top: 0; left:0; width: 100%; height: 640px; border: 0;"
 					loading="lazy";
-					src="https://github.com/medialab1422/page/main/webprogramming/113/resources/${allData[i].GroupID}/proposal.pdf" 
+					src="./113/resources/${allData[i].GroupID}/proposal.pdf" 
 					title="Embedded PDF Viewer"
 					frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
