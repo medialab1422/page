@@ -1,0 +1,154 @@
+
+<html lang="en">
+<head>
+<style>
+	button{
+		position: fixed;
+		width: 10%;
+		height: 100%;
+		text-align:center;
+		background-color:gray;
+		color:white;
+		opacity:0%;
+		transition: all 0.6s ease;
+	}
+	button:hover {
+		opacity:50%;
+	}
+	.pageinfo{
+		position: fixed;
+		text-align:center;
+		vertical-align:middle;
+		background-color:gray;
+		color:white;
+		margin: auto;
+		opacity:0%;
+		transition: all 0.4s ease;
+	}
+	.pageinfo:hover{
+		opacity:70%;
+	}
+</style>
+</head>
+<body>
+<script src="https://mozilla.github.io/pdf.js/build/pdf.mjs" type="module"></script>
+
+<script type="module">
+  // If absolute URL from the remote server is provided, configure the CORS
+  // header on that server.
+  var url = 'https://media.githubusercontent.com/media/medialab1422/page/main/webprogramming/113/resources/Group4/proposal.pdf';
+
+  // Loaded via <script> tag, create shortcut to access PDF.js exports.
+  var { pdfjsLib } = globalThis;
+
+  // The workerSrc property shall be specified.
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.mjs';
+
+  var pdfDoc = null,
+	  pageNum = 1,
+	  pageRendering = false,
+	  pageNumPending = null,
+	  scale = 0.8,
+	  canvas = document.getElementById('the-canvas'),
+	  ctx = canvas.getContext('2d');
+
+  /**
+   * Get page info from document, resize canvas accordingly, and render page.
+   * @param num Page number.
+   */
+  function renderPage(num) {
+	pageRendering = true;
+	// Using promise to fetch the page
+	pdfDoc.getPage(num).then(function(page) {
+	  var viewport = page.getViewport({scale: scale});
+	  canvas.height = viewport.height;
+	  canvas.width = viewport.width;
+
+	  // Render PDF page into canvas context
+	  var renderContext = {
+		canvasContext: ctx,
+		viewport: viewport
+	  };
+	  var renderTask = page.render(renderContext);
+
+	  // Wait for rendering to finish
+	  renderTask.promise.then(function() {
+		pageRendering = false;
+		if (pageNumPending !== null) {
+		  // New page rendering is pending
+		  renderPage(pageNumPending);
+		  pageNumPending = null;
+		}
+	  });
+	});
+
+	// Update page counters
+	document.getElementById('page_num').textContent = num;
+  }
+
+  /**
+   * If another page rendering in progress, waits until the rendering is
+   * finised. Otherwise, executes rendering immediately.
+   */
+  function queueRenderPage(num) {
+	if (pageRendering) {
+	  pageNumPending = num;
+	} else {
+	  renderPage(num);
+	}
+  }
+
+  /**
+   * Displays previous page.
+   */
+  function onPrevPage() {
+	if (pageNum <= 1) {
+	  return;
+	}
+	pageNum--;
+	queueRenderPage(pageNum);
+  }
+  document.getElementById('prev').addEventListener('click', onPrevPage);
+
+  /**
+   * Displays next page.
+   */
+  function onNextPage() {
+	if (pageNum >= pdfDoc.numPages) {
+	  return;
+	}
+	pageNum++;
+	queueRenderPage(pageNum);
+  }
+  document.getElementById('next').addEventListener('click', onNextPage);
+
+  /**
+   * Asynchronously downloads PDF.
+   */
+  pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+	pdfDoc = pdfDoc_;
+	document.getElementById('page_count').textContent = pdfDoc.numPages;
+
+	// Initial/first page rendering
+	renderPage(pageNum);
+  });
+</script>
+<div>
+	<div>
+	  <button id="prev" style="
+	  left:0px;
+	  "><</button>
+	  <button id="next" style="
+	  right:0px;
+	  ">></button>
+	  <span class="pageinfo" style="
+		width: 10%;
+		height: 10%;
+		right: 0px;
+		left: 0px;"><span id="page_num"></span> / <span id="page_count"></span></span>
+	</div>
+
+	<canvas id="the-canvas" style="width:100%;margin:auto;"></canvas>
+</div>
+</body>
+</html>

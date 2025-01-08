@@ -21,19 +21,18 @@ $(document).ready(function () {
             <div class="card col-md-6 col-sm-12 mt-1" id="${allData[i].GroupID}">
                 <div class="card-body col-md-12">
                   <p class="card-title" style="font-size:large;font-weight:bold;">${i + 1 + ". " + allData[i].GroupID}</p>
-                    <a href="${allData[i].PdfURL}" class="btn btn-success m-2" target="_blank">Proposal PDF</a>
                     
 					
-					<object 
+					<iframe 
 					style=" top: 0; left:0; width: 100%; height: 640px; border: 0;"
 					loading="lazy";
-					data="${allData[i].PdfURL}" 
+					src="https://medialab1422.github.io/page/webprogramming/113/resources/${allData[i].GroupID}/info.html" 
 					title="Embedded PDF Viewer"
 					>
 						<p>
 							Your browser does not support PDFs.
 						</p>
-					</object>
+					</iframe>
 
 
 				</div>
