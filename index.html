@@ -9,27 +9,68 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* 小小的客製化調整：
-         - 讓 logo 圖片大小更合適
-         - 增加一點頂部空間 
-        */
+        /* [優化] 1. 使用 Noto Sans TC 作為基礎字體 */
         body {
-            padding-top: 56px; /* 為固定在頂部的 navbar 預留空間 */
+            padding-top: 56px; 
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8f9fa; /* [優化] 淺灰色背景，讓卡片浮出來 */
         }
+        
+        /* [優化] 2. 提升閱讀體驗 (字體大小與行高) */
+        p, .card-text {
+            font-size: 1.05rem; /* 略微增大字體 */
+            line-height: 1.8;   /* 大幅增加行高，更易讀 */
+        }
+
         .navbar-brand img {
-            max-height: 40px; /* 限制 logo 高度 */
+            max-height: 40px;
             margin-right: 10px;
         }
+
         .article-meta {
             font-size: 0.9em;
-            color: #6c757d; /* 灰色文字 */
+            color: #6c757d;
         }
+        
+        /* [優化] 3. 讓卡片標題連結更優雅 */
+        .card-title a {
+            color: inherit; /* 繼承父層的黑色 */
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .card-title a:hover {
+            color: #0d6efd; /* 滑過時變藍色 */
+            text-decoration: none;
+        }
+        
+        /* [優化] 4. 側邊欄合併列表的樣式 */
+        .sidebar-links .list-group-item {
+            padding: .5rem 0;
+            border: 0;
+        }
+        .sidebar-links .list-group-item a {
+            text-decoration: none;
+            color: #6c757d; /* 灰色文字 */
+            transition: color 0.2s;
+        }
+        .sidebar-links .list-group-item a:hover {
+            color: #000;
+        }
+        .sidebar-links .list-group-item.active a {
+            color: #0d6efd; /* 藍色 */
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="design/lablogo1.png" alt="Lab Logo"> Interactive Media Laboratory
@@ -53,82 +94,83 @@
         </div>
     </nav>
 
-    <div class="container mt-5"> <div class="row">
+    <div class="container mt-5">
+        <div class="row">
 
             <main class="col-lg-8">
-                <h1 class="display-4 mb-4">News</h1>
+                <h1 class="h2 mb-4 fw-bold">News</h1>
 
-                <article class="card mb-4">
-                    <div class="card-body">
-                        <h2 class="card-title h3"><a href="learning.html#OpenGL" class="text-decoration-none">OpenGL</a></h2>
+                <article class="card mb-4 border-0 shadow-sm">
+                    <div class="card-body p-4"> <h2 class="card-title h3"><a href="learning.html#OpenGL">OpenGL</a></h2>
                         <p class="article-meta">
                             <span class="date"><i class="bi bi-calendar"></i> 2014-07-17</span> | 
                             <span class="cat"><a href="learning.html" class="text-decoration-none"><i class="bi bi-tag"></i> Learning</a></span> | 
                             <span class="user"><a href="about_us.html#OuWen" class="text-decoration-none"><i class="bi bi-person"></i> 歐文</a></span>
                         </p>
-                        <p class="card-text"><a href="learning.html#OpenGL">OpenGL讀書會，閱讀 OpenGL Superbible,6th edition.</a></p>
+                        <p class="card-text"><a href="learning.html#OpenGL" class="text-decoration-none">OpenGL讀書會，閱讀 OpenGL Superbible,6th edition.</a></p>
                     </div>
                 </article>
 
-                <article class="card mb-4">
-                    <div class="card-body">
-                        <h2 class="card-title h3"><a href="learning.html#Unity" class="text-decoration-none">Unity</a></h2>
+                <article class="card mb-4 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="card-title h3"><a href="learning.html#Unity">Unity</a></h2>
                         <p class="article-meta">
                             <span class="date"><i class="bi bi-calendar"></i> 2014-07-03</span> | 
                             <span class="cat"><a href="learning.html" class="text-decoration-none"><i class="bi bi-tag"></i> Learning</a></span> | 
                             <span class="user"><a href="about_us.html#OuWen" class="text-decoration-none"><i class="bi bi-person"></i> 歐文</a></span>
                         </p>
-                        <p class="card-text"><a href="learning.html#Unity">Unity讀書會，包括 shootGun + OpenCVSharp + NGUI.</a></p>
+                        <p class="card-text"><a href="learning.html#Unity" class="text-decoration-none">Unity讀書會，包括 shootGun + OpenCVSharp + NGUI.</a></p>
                     </div>
                 </article>
 
             </main>
 
             <aside class="col-lg-4">
-                
-                <div class="card mb-4">
-                    <div class="card-header"><i class="bi bi-person-fill"></i> Professor</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Pei-Ying Chiang</h5>
-                        <p class="card-text">Computer Science / Graphics</p>
-                        <a href="http://www-scf.usc.edu/~peiyingc/index.html" class="btn btn-primary btn-sm">MySpace</a>
+                <div class="sticky-top" style="top: 80px;">
+                    
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-header bg-white border-0 pt-3"><i class="bi bi-person-fill"></i> Professor</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Pei-Ying Chiang</h5>
+                            <p class="card-text text-muted">Computer Science / Graphics</p>
+                            <a href="http://www-scf.usc.edu/~peiyingc/index.html" class="btn btn-primary btn-sm">MySpace</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card mb-4">
-                    <div class="card-header"><i class="bi bi-bookmark-fill"></i> Category</div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item active"><a href="#" class="text-white">News</a></li>
-                        <li class="list-group-item"><a href="learning.html#OpenGL">OpenGL讀書會</a></li>
-                        <li class="list-group-item"><a href="learning.html#Unity">Unity讀書會</a></li>
-                    </ul>
-                </div>
+                    <div class="card mb-4 border-0 shadow-sm sidebar-links">
+                        <div class="card-body">
+                            <h5 class="card-title h6 fw-bold"><i class="bi bi-bookmark-fill"></i> Category</h5>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item active"><a href="#">News</a></li>
+                                <li class="list-group-item"><a href="learning.html#OpenGL">OpenGL讀書會</a></li>
+                                <li class="list-group-item"><a href="learning.html#Unity">Unity讀書會</a></li>
+                            </ul>
+                            
+                            <h5 class="card-title h6 fw-bold"><i class="bi bi-archive-fill"></i> Archive</h5>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item active"><a href="#">Project</a></li>
+                                <li class="list-group-item"><a href="project.html#ezhouse">易構屋</a></li>
+                                <li class="list-group-item"><a href="project.html#Modeling">hand gesture recognition...</a></li>
+                                <li class="list-group-item"><a href="project.html#digimax">太極_漢宮畫師</a></li>
+                            </ul>
 
-                <div class="card mb-4">
-                    <div class="card-header"><i class="bi bi-archive-fill"></i> Archive</div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item active"><a href="#" class="text-white">Project</a></li>
-                        <li class="list-group-item"><a href="project.html#ezhouse">易構屋</a></li>
-                        <li class="list-group-item"><a href="project.html#Modeling">hand gesture recognition AR 3D Modeling System</a></li>
-                        <li class="list-group-item"><a href="project.html#digimax">太極_漢宮畫師</a></li>
-                    </ul>
-                </div>
+                            <h5 class="card-title h6 fw-bold"><i class="bi bi-link-45deg"></i> Links</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="http://www.cs.usc.edu/" target="_blank" rel="noopener noreferrer">USC</a></li>
+                                <li class="list-group-item"><a href="https://docs.google.com/spreadsheets/d/1XaYZvzgcvlsCG9b9CIrHNNgWgNMc7WpUa9v4XJ53Wl4/edit#gid=0">實驗室配屬</a></li>
+                                <li class="list-group-item"><a href="https://docs.google.com/spreadsheets/d/1elrbBWi0m3cX4A01HhMYYuFBhf6EaG5gT-M1qZo813k/edit#gid=0">暑期讀書會</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
-                <div class="card mb-4">
-                    <div class="card-header"><i class="bi bi-link-45deg"></i> Links</div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="http://www.cs.usc.edu/" target="_blank" rel="noopener noreferrer">USC</a></li>
-                        <li class="list-group-item"><a href="https://docs.google.com/spreadsheets/d/1XaYZvzgcvlsCG9b9CIrHNNgWgNMc7WpUa9v4XJ53Wl4/edit#gid=0">Interactive Media Lab 實驗室配屬</a></li>
-                        <li class="list-group-item"><a href="https://docs.google.com/spreadsheets/d/1elrbBWi0m3cX4A01HhMYYuFBhf6EaG5gT-M1qZo813k/edit#gid=0">Interactive Media Lab 暑期讀書會</a></li>
-                    </ul>
                 </div>
-
             </aside>
         </div>
     </div>
 
-    <footer class="py-4 bg-light mt-5"> <div class="container text-center">
-            <p class="mb-0">&copy; 2013 Interactive Media Laboratory</p>
+    <footer class="py-4 bg-dark text-white mt-5">
+        <div class="container text-center">
+            <p class="mb-0 text-white-50">&copy; 2013 Interactive Media Laboratory</p>
         </div>
     </footer>
 
