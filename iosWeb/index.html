@@ -1,86 +1,210 @@
+
 <!DOCTYPE html>
-<html lang="zh-TW">
+
+<html lang="en">
+
+
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>課程網站 - IOS 應用程式開發</title>
 
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="./style.css">
-    <link href='https://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/earlyaccess/cwtexkai.css' rel='stylesheet' type='text/css'>
-    <link rel="icon" href="./oldData/icon.png" type="image/png">
+    <meta charset="UTF-8">
+
+    <title> IOS 應用程式開發 </title>
+
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/earlyaccess/cwtexkai.css' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" href="./oldData/icon.png" type="image/png">
+
 </head>
+
+
 
 <body>
 
-    <header>
-        <nav id="nav">
-            <button onclick="scrolltoID('about')">介紹</button>
-            <button onclick="scrolltoID('portfolio')">作業DEMO：</button>
+    <header>
 
-            <div class="dropdown">
-                <button id="demo" class="dropbtn"></button>
-                <div id="yearDropdown" class="dropdown-content">
-                </div>
-            </div>
+        <div id="nav">
 
-            <div class="dropdown">
-                <button id="group" class="dropbtn">
-                    各組別 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                    </svg>
-                </button>
-                <div id="groupDropdown" class="dropdown-content">
-                </div>
-            </div>
-            </nav>
-    </header>
+            <button style="padding:16px 50px;" onclick="scrolltoID('about')">介紹</button>
 
-    <section id="about" class="container">
-        <h2>Web 應用程式開發</h2>
 
-        <div class="row">
-            <div class="col-md-8">
-                <p>This course introduces the application of Hypertext Markup Language (HTML) syntax and Cascading Style Sheets (CSS). The course content includes: Hypertext Markup Language Cascading Style Sheets JavaScript, an interpreted scripting language HTML5 APIs syntax CSS3 features Scalable Vector Graphics (SVG) HTML5 Canvas Application Programming Interface (API) WebGL for three-dimensional rendering</p>
 
-                <h2 style="margin:0;padding: 0;">課程簡介</h2>
-                <p>本課程大致如下：</p>
-                <ul>
-                    <li>Syllabus</li>
-                    <li>Chapter1: Hypertext Markup Language </li>
-                    <li>Chapter2: Cascading Style Sheets </li>
-                    <li>Midterm Project</li>
-                    <li>JavaScript, HTML Canvas</li>
-                    <li>WebGL</li>
-                    <li>Advanced Web programming topics</li>
-                    <li>Final Project</li>
-                </ul>
-            </div>
+            <button onclick="scrolltoID('portfolio')">作業DEMO：</button>
 
-            <div class="side col-md-4">
-                <h3>iOS App development</h3>
-                <p>In this course, you will get hands-on with the Apple SDK and learn how to use Objective-C to build the apps from scratch; You will be equipped to develop iOS apps, including 3D Apps through an understanding of the following course materials: ˙Introduction to iOS ˙How to program in Objective-C ˙Using X-Code ˙The basics UI design of an iPhone/iPad application ˙iOS MVC structure ˙Use of sensors, the GPS, and cameras ˙Multimedia functions – how to play audio and video files ˙OpenGL ES for 3D/AR application ˙Project Demo and Review ˙How to publish an iPhone/iPad application.
-                </p>
-            </div>
-        </div> </section>
+            <div class="dropdown">
 
-    <section id="portfolio" class="container">
-        <h2 id="title">作業DEMO</h2>
-        <div id="portfolioContainer"></div>
-    </section>
+                <button id="demo" class="dropbtn"> </button>
 
-    <footer>
-        <div class="container wrapper">
-            <h3>台北科技大學 資工系 江佩穎教授</h3>
-        </div>
-    </footer>
+                <div id="yearDropdown" class="dropdown-content">
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="https://d3js.org/d3.v3.js"></script>
-    <script src="./script.js"></script>
+                </div>
+
+            </div>
+
+
+
+            <div class="dropdown">
+
+                <button id="group" class="dropbtn">各組別 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+
+                        fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+
+                        <path
+
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+
+                    </svg> </button>
+
+                <div id="groupDropdown" class="dropdown-content">
+
+                </div>
+
+            </div>
+
+            <!-- <a href="./oldData/" id="oldlink">OLD LINK</a> -->
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <!-- CONTAINER -->
+
+        <div class="container">
+
+            <h2>IOS 應用程式開發</h2>
+
+            <div style="padding-left: 0;" class="col-md-8">
+
+                <p>This course introduces the application of Hypertext Markup Language (HTML) syntax and Cascading Style Sheets (CSS). The course content includes:
+Hypertext Markup Language
+Cascading Style Sheets
+JavaScript, an interpreted scripting language
+HTML5 APIs syntax
+CSS3 features
+Scalable Vector Graphics (SVG)
+HTML5 Canvas Application Programming Interface (API)
+WebGL for three-dimensional rendering</p>
+
+
+
+                <h2 style="margin:0;padding: 0;">課程簡介</h2>
+
+                <p> 本課程大致如下：
+
+                    <ul>
+
+                        <li>Syllabus</li>
+
+                        <li>Chapter1: Hypertext Markup Language </li>
+
+                        <li>Chapter2: Cascading Style Sheets </li>
+
+                        <li>Midterm Project</li>
+
+                        <li>JavaScript, HTML Canvas</li>
+
+                        <li>WebGL</li>
+
+                        <li>Advanced Web programming topics</li>
+                        
+                        <li>Final Project</li>
+
+                </p>
+
+            </div>
+
+
+
+            <div class="side col-md-4">
+
+
+
+                <h3 style="font-size: 30px;">iOS App development</h3>
+
+                <br>
+
+                <p>In this course, you will get hands-on with the Apple SDK and learn how to use Objective-C to build the apps from scratch; You will be equipped to develop iOS apps, including 3D Apps through an understanding of the following course materials:
+
+                    ˙Introduction to iOS ˙How to program in Objective-C ˙Using X-Code ˙The basics UI design of an iPhone/iPad application ˙iOS MVC structure ˙Use of sensors, the GPS, and cameras ˙Multimedia functions – how to play audio and video files
+
+                    ˙OpenGL ES for 3D/AR application ˙Project Demo and Review ˙How to publish an iPhone/iPad application.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- END OF CONTAINER -->
+
+    </section>
+
+    <!-- END OF ABOUT -->
+
+
+
+    <!-- PORTFOLIO -->
+
+    <section id="portfolio">
+
+
+
+        <!-- CONTAINER -->
+
+        <div class="container">
+
+            <h2 id="title">作業DEMO</h2>
+
+            <div id="portfolioContainer"></div>
+
+        </div>
+
+        <!-- END OF CONTAINER -->
+
+    </section>
+
+    <!-- END OF PORTFOLIO -->
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer-container">
+
+        <footer class="wrapper">
+
+            <h3>台北科技大學 資工系 江佩穎教授</h3>
+
+        </footer>
+
+    </div>
+
+    <!-- END OF FOOTER -->
+
+
+
+    <!-- partial -->
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="https://d3js.org/d3.v3.js"></script>
+
+    <script src="./script.js"></script>
+
 </body>
+
+
 
 </html>
