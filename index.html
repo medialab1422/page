@@ -1,138 +1,138 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
 <head>
-  <meta charset="utf-8" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Media Laboratory</title>
 
-  <meta name="author" content="All: ... [Nazev webu - www.url.cz]; e-mail: info@url.cz" />
-  <meta name="copyright" content="Design/Code: Vit Dlouhy [Nuvio - www.nuvio.cz]; e-mail: vit.dlouhy@nuvio.cz" />
-
-  <title>Interactive Media Laboratory</title>
-  
-  <meta name="description" content="... " />
-  <meta name="keywords" content="... " />
-
-  <link rel="index" href="./" title="Home" />
-  
-  <link rel="stylesheet" media="screen" type="text/css" href="css/main.css" />
-  <link rel="stylesheet" media="print" type="text/css" href="css/print.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* 小小的客製化調整：
+         - 讓 logo 圖片大小更合適
+         - 增加一點頂部空間 
+        */
+        body {
+            padding-top: 56px; /* 為固定在頂部的 navbar 預留空間 */
+        }
+        .navbar-brand img {
+            max-height: 40px; /* 限制 logo 高度 */
+            margin-right: 10px;
+        }
+        .article-meta {
+            font-size: 0.9em;
+            color: #6c757d; /* 灰色文字 */
+        }
+    </style>
 </head>
+<body>
 
-<body id="www-url-cz"> <main id="main" class="box">
-
-    <header id="header">
-
-      <h1 id="logo">
-        <a href="index.html" title="Interactive Media Laboratory [Go to homepage]"><img src="design/lablogo1.png" id="lablogo" alt="Interactive Media Laboratory" /></a>
-      </h1>
-
-      <div>
-        <p id="logo2"><em>NTUT CSIE Laboratory</em></p>
-      </div>
-      
-      </header>
-    <nav id="tabs" class="noprint" aria-label="主要導覽列">
-
-      <ul class="box">
-        <li id="active"><a href="index.html">Home<span class="tab-l"></span><span class="tab-r"></span></a></li>
-        <li><a href="about_us.html">About_us<span class="tab-l"></span><span class="tab-r"></span></a></li>
-        <li><a href="project.html">Project<span class="tab-l"></span><span class="tab-r"></span></a></li>
-        <li><a href="course.html">Course<span class="tab-l"></span><span class="tab-r"></span></a></li>
-        <li><a href="learning.html">Study Group<span class="tab-l"></span><span class="tab-r"></span></a></li>
-        <li><a href="meeting.html">Meeting<span class="tab-l"></span><span class="tab-r"></span></a></li>
-        <li><a href="rest/links.html">Links<span class="tab-l"></span><span class="tab-r"></span></a></li>
-      </ul>
-
-      </nav>
-    <div id="page" class="box">
-      <div id="page-in" class="box">
-
-        <section id="content">
-
-          <article class="article">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="design/lablogo1.png" alt="Lab Logo"> Interactive Media Laboratory
+            </a>
             
-            <h2><a href="index.html">News</a></h2>
-            <h3><a href="learning.html#OpenGL">OpenGL</a></h3>
-            
-            <p class="info noprint">
-              <span class="date">2014_07_17 @ 13:01</span><span class="noscreen">,</span>
-              <span class="cat"><a href="learning.html">Learning</a></span><span class="noscreen">,</span>
-              <span class="user"><a href="about_us.html#OuWen">歐文</a></span><span class="noscreen">,</span>
-              <span class="comments"><a href="index.html">News</a></span>
-            </p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <p><a href="learning.html#OpenGL">OpenGL讀書會，閱讀 OpenGL Superbible,6th edition.</a></p>
-
-          </article>
-          <article class="article">
-            <h3><a href="learning.html#Unity">Unity</a></h3>
-            <p class="info noprint">
-              <span class="date">2014_07_03 @ 13:01</span><span class="noscreen">,</span>
-              <span class="cat"><a href="learning.html">Learning</a></span><span class="noscreen">,</span>
-              <span class="user"><a href="about_us.html#OuWen">歐文</a></span><span class="noscreen">,</span>
-              <span class="comments"><a href="index.html">News</a></span>
-            </p>
-
-            <p><a href="learning.html#Unity">Unity讀書會，包括 shootGun + OpenCVSharp + NGUI.</a></p>
-
-          </article>
-          </section>
-        <aside id="col" class="noprint">
-          <div id="col-in">
-
-            <section id="professor-info">
-              <h3><a href="http://www-scf.usc.edu/~peiyingc/index.html">Professor</a></h3>
-              <div id="about-me">
-                <p>
-                  <strong>Pei-Ying Chiang</strong><br /> Computer
-                  <br /> Science / Graphics<br />
-                  <a href="http://www-scf.usc.edu/~peiyingc/index.html">MySpace</a>
-                </p>
-              </div>
-            </section>
-
-            <section id="category-section">
-              <h3>Category</h3>
-              <ul id="category">
-                <li id="category-active"><a href="#">News</a></li>
-                <li><a href="learning.html#OpenGL">OpenGL讀書會</a></li>
-                <li><a href="learning.html#Unity">Unity讀書會</a></li>
-              </ul>
-            </section>
-
-            <section id="archive-section">
-              <h3>Archive</h3>
-              <ul id="archive">
-                <li id="archive-active"><a href="#">Project</a></li>
-                <li><a href="project.html#ezhouse">易構屋</a></li>
-                <li><a href="project.html#Modeling">hand gesture recognition AR 3D Modeling System</a></li>
-                <li><a href="project.html#digimax">太極_漢宮畫師</a></li>
-              </ul>
-            </section>
-
-            <section id="links-section">
-              <h3>Links</h3>
-              <ul id="links">
-                <li><a href="http://www.cs.usc.edu/" target="_blank" rel="noopener noreferrer">USC</a></li>
-                <li><a href="https://docs.google.com/spreadsheets/d/1XaYZvzgcvlsCG9b9CIrHNNgWgNMc7WpUa9v4XJ53Wl4/edit#gid=0">Interactive Media Lab 實驗室配屬</a></li>
-                <li><a href="https://docs.google.com/spreadsheets/d/1elrbBWi0m3cX4A01HhMYYuFBhf6EaG5gT-M1qZo813k/edit#gid=0">Interactive Media Lab 暑期讀書會</a></li>
-              </ul>
-            </section>
-
-          </div>
-          </aside>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">About_us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="project.html">Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="course.html">Course</a></li>
+                    <li class="nav-item"><a class="nav-link" href="learning.html">Study Group</a></li>
+                    <li class="nav-item"><a class="nav-link" href="meeting.html">Meeting</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rest/links.html">Links</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    <footer id="footer">
-      <div id="top" class="noprint">
-        <p><span class="noscreen">Back on top</span> <a href="#header" title="Back on top ^">^<span></span></a></p>
-      </div>
+    </nav>
 
-      <p id="copyright">&copy; 2013 <a href="index.html">Interactive Media Laboratory</a></p>
+    <div class="container mt-5"> <div class="row">
+
+            <main class="col-lg-8">
+                <h1 class="display-4 mb-4">News</h1>
+
+                <article class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title h3"><a href="learning.html#OpenGL" class="text-decoration-none">OpenGL</a></h2>
+                        <p class="article-meta">
+                            <span class="date"><i class="bi bi-calendar"></i> 2014-07-17</span> | 
+                            <span class="cat"><a href="learning.html" class="text-decoration-none"><i class="bi bi-tag"></i> Learning</a></span> | 
+                            <span class="user"><a href="about_us.html#OuWen" class="text-decoration-none"><i class="bi bi-person"></i> 歐文</a></span>
+                        </p>
+                        <p class="card-text"><a href="learning.html#OpenGL">OpenGL讀書會，閱讀 OpenGL Superbible,6th edition.</a></p>
+                    </div>
+                </article>
+
+                <article class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title h3"><a href="learning.html#Unity" class="text-decoration-none">Unity</a></h2>
+                        <p class="article-meta">
+                            <span class="date"><i class="bi bi-calendar"></i> 2014-07-03</span> | 
+                            <span class="cat"><a href="learning.html" class="text-decoration-none"><i class="bi bi-tag"></i> Learning</a></span> | 
+                            <span class="user"><a href="about_us.html#OuWen" class="text-decoration-none"><i class="bi bi-person"></i> 歐文</a></span>
+                        </p>
+                        <p class="card-text"><a href="learning.html#Unity">Unity讀書會，包括 shootGun + OpenCVSharp + NGUI.</a></p>
+                    </div>
+                </article>
+
+            </main>
+
+            <aside class="col-lg-4">
+                
+                <div class="card mb-4">
+                    <div class="card-header"><i class="bi bi-person-fill"></i> Professor</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pei-Ying Chiang</h5>
+                        <p class="card-text">Computer Science / Graphics</p>
+                        <a href="http://www-scf.usc.edu/~peiyingc/index.html" class="btn btn-primary btn-sm">MySpace</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header"><i class="bi bi-bookmark-fill"></i> Category</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item active"><a href="#" class="text-white">News</a></li>
+                        <li class="list-group-item"><a href="learning.html#OpenGL">OpenGL讀書會</a></li>
+                        <li class="list-group-item"><a href="learning.html#Unity">Unity讀書會</a></li>
+                    </ul>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header"><i class="bi bi-archive-fill"></i> Archive</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item active"><a href="#" class="text-white">Project</a></li>
+                        <li class="list-group-item"><a href="project.html#ezhouse">易構屋</a></li>
+                        <li class="list-group-item"><a href="project.html#Modeling">hand gesture recognition AR 3D Modeling System</a></li>
+                        <li class="list-group-item"><a href="project.html#digimax">太極_漢宮畫師</a></li>
+                    </ul>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header"><i class="bi bi-link-45deg"></i> Links</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="http://www.cs.usc.edu/" target="_blank" rel="noopener noreferrer">USC</a></li>
+                        <li class="list-group-item"><a href="https://docs.google.com/spreadsheets/d/1XaYZvzgcvlsCG9b9CIrHNNgWgNMc7WpUa9v4XJ53Wl4/edit#gid=0">Interactive Media Lab 實驗室配屬</a></li>
+                        <li class="list-group-item"><a href="https://docs.google.com/spreadsheets/d/1elrbBWi0m3cX4A01HhMYYuFBhf6EaG5gT-M1qZo813k/edit#gid=0">Interactive Media Lab 暑期讀書會</a></li>
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+    </div>
+
+    <footer class="py-4 bg-light mt-5"> <div class="container text-center">
+            <p class="mb-0">&copy; 2013 Interactive Media Laboratory</p>
+        </div>
     </footer>
-    </main>
-  </body>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
 </html>
