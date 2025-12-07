@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
@@ -7,14 +8,29 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel="stylesheet" href="./style.css">
     <link href='https://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>iOS 應用程式開發課程</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <link href='https://fonts.googleapis.com/earlyaccess/cwtexkai.css' rel='stylesheet' type='text/css'>
     <link rel="icon" href="./oldData/icon.png" type="image/png">
 </head>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="icon" href="./images/icon.png" type="image/png"> </head>
 
 <body>
     <header>
         <div id="nav">
             <button style="padding:16px 50px;" onclick="scrolltoID('about')">介紹</button>
+    <header class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#about">iOS 應用程式開發</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <button onclick="scrolltoID('portfolio')">作業DEMO：</button>
             <div class="dropdown">
@@ -22,6 +38,14 @@
                 <div id="yearDropdown" class="dropdown-content">
                 </div>
             </div>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto" id="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">課程介紹</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">作業 DEMO</a>
+                    </li>
 
             <div class="dropdown">
                 <button id="group" class="dropbtn">各組別 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -31,6 +55,22 @@
                     </svg> </button>
                 <div id="groupDropdown" class="dropdown-content">
                 </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="yearDropdownLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            DEMO 年份 <span id="demo"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="yearDropdownLink" id="yearDropdown">
+                            </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="groupDropdownLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            各組別
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="groupDropdownLink" id="groupDropdown">
+                            </ul>
+                    </li>
+                </ul>
             </div>
             <!-- <a href="./oldData/" id="oldlink">OLD LINK</a> -->
         </div>
@@ -39,37 +79,71 @@
     <!-- ABOUT -->
     <section id="about">
         <!-- CONTAINER -->
+    <section id="about" class="py-5">
         <div class="container">
             <h2>IOS 應用程式開發</h2>
             <div style="padding-left: 0;" class="col-md-8">
-                <p>This course introduces the application of Hypertext Markup Language (HTML) syntax and Cascading Style Sheets (CSS). The course content includes: Hypertext Markup Language Cascading Style Sheets JavaScript, an interpreted scripting language HTML5 APIs syntax CSS3 features Scalable Vector Graphics (SVG) HTML5 Canvas Application Programming Interface (API) WebGL for three-dimensional rendering。 </p>
+                <p>Apple推出iPhone以及iPhone SDK 後，造成了一股不可擋的智慧型手機革命，由於相較於桌上型和筆記型電腦，手機是人們日常生活中更容易貼近使用的行動裝置，因此，手機中的App 更可以幫助人們解決生活中的問題。 本課程將由最基本的入門點切入，前段會先帶領同學針對Objective-C 語法，委派設計(Delegate)模式等iOS入門的幾大難題上課，接著利用Storyboard建構出常見的iOS app 使用者介面，最後再教導同學用OpenGL es 實作有趣的3D
+                    應用程式。 </p>
 
                 <h2 style="margin:0;padding: 0;">課程簡介</h2>
                 <p> 本課程大致如下：
                     <ul>
-                        <li>1. Chapter1: Hypertext Markup Language </li>
-                        <li>2. Chapter2: Cascading Style Sheets </li>
-                        <li>3. Midterm Project </li>
-                        <li>4. JavaScript, HTML Canvas </li>
-                        <li>5. WebGL </li>
-                        <li>6. Advanced Web programming topics </li>
-                        <li>7. Final Project </li>
-
+                        <li>1. 導論 </li>
+                        <li>2. Objective-C </li>
+                        <li>3. iOS系統架構 </li>
+                        <li>4. Xcode開發工具安裝與使用 </li>
+                        <li>5. 基礎UI設計與多國語言 </li>
+                        <li>6. 核心應用程式設計 </li>
+                        <li>7. 感應器應用 </li>
+                        <li>8. 多媒體與相機功能 </li>
+                        <li>9. OpenGL ES </li>
+                        <li>10. 擴增實境 </li>
+                        <li>11. 專題實作及評鑑</li>
                 </p>
             </div>
 
             <div class="side col-md-4">
+            <h1 class="text-center mb-4">iOS 應用程式開發</h1>
+            
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        Apple 推出 iPhone 以及 iPhone SDK 後，造成了一股不可擋的智慧型手機革命...（內容略）...最後再教導同學用 OpenGL ES 實作有趣的 3D 應用程式。
+                    </p>
+                    
+                    <h2 class="mt-4 mb-3">課程簡介</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">1. 導論</li>
+                        <li class="list-group-item">2. Objective-C (或 Swift)</li>
+                        <li class="list-group-item">3. iOS 系統架構</li>
+                        <li class="list-group-item">4. Xcode 開發工具安裝與使用</li>
+                        <li class="list-group-item">5. 基礎 UI 設計與多國語言</li>
+                        <li class="list-group-item">6. 核心應用程式設計 (例如 MVC/MVVM)</li>
+                        <li class="list-group-item">7. 感應器應用</li>
+                        <li class="list-group-item">8. 多媒體與相機功能</li>
+                        <li class="list-group-item">9. OpenGL ES (或改用 Metal / ARKit)</li>
+                        <li class="list-group-item">10. 擴增實境 (AR)</li>
+                        <li class="list-group-item">11. 專題實作及評鑑</li>
+                    </ul>
+                </div>
 
                 <h3 style="font-size: 30px;">iOS App development</h3>
                 <br>
-                <p>這堂課涵蓋了建立現代網站的三大核心技術：
-
-HTML：學習網頁的結構和內容。
-
-CSS：學習網頁的樣式和設計排版，包括最新的 CSS3 特性與 SVG 向量圖形。
-
-JavaScript：學習讓網頁產生互動與動態行為，並介紹 HTML5 APIs、Canvas 2D 繪圖以及 WebGL 3D 渲染技術。
+                <p>In this course, you will get hands-on with the Apple SDK and learn how to use Objective-C to build the apps from scratch; You will be equipped to develop iOS apps, including 3D Apps through an understanding of the following course materials:
+                    ˙Introduction to iOS ˙How to program in Objective-C ˙Using X-Code ˙The basics UI design of an iPhone/iPad application ˙iOS MVC structure ˙Use of sensors, the GPS, and cameras ˙Multimedia functions – how to play audio and video files
+                    ˙OpenGL ES for 3D/AR application ˙Project Demo and Review ˙How to publish an iPhone/iPad application.
                 </p>
+                <aside class="col-lg-4 mt-4 mt-lg-0 side">
+                    <div class="p-4 border rounded bg-light">
+                        <h3 class="h4 mb-3">iOS App Development</h3>
+                        <p class="text-muted">
+                            In this course, you will get hands-on with the Apple SDK and learn how to use Objective-C/Swift to build the apps from scratch...
+                            (內容略)
+                            ...OpenGL ES for 3D/AR application ˙Project Demo and Review ˙How to publish an iPhone/iPad application.
+                        </p>
+                    </div>
+                </aside>
             </div>
         </div>
         <!-- END OF CONTAINER -->
@@ -80,9 +154,13 @@ JavaScript：學習讓網頁產生互動與動態行為，並介紹 HTML5 APIs�
     <section id="portfolio">
 
         <!-- CONTAINER -->
+    <section id="portfolio" class="py-5 bg-light">
         <div class="container">
             <h2 id="title">作業DEMO</h2>
             <div id="portfolioContainer"></div>
+            <h2 id="title" class="text-center mb-5">作業 DEMO (學生作品集)</h2>
+            <div class="row" id="portfolioContainer">
+                </div>
         </div>
         <!-- END OF CONTAINER -->
     </section>
@@ -95,6 +173,13 @@ JavaScript：學習讓網頁產生互動與動態行為，並介紹 HTML5 APIs�
         </footer>
     </div>
     <!-- END OF FOOTER -->
+    <footer class="text-center py-3 bg-dark text-white">
+        <div class="container">
+            <p class="mb-0">台北科技大學 資工系 江佩穎教授 課程網站</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4y9l7wYgTj+Q7rJvI4V3B/Tz/IeFp2I9lQzD/7f/Gk1F+K4P75" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavLwZRjDMVEhByyOQ72N3gU6f5Z1z6" crossorigin="anonymous"></script>
 
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
@@ -102,4 +187,5 @@ JavaScript：學習讓網頁產生互動與動態行為，並介紹 HTML5 APIs�
     <script src="./script.js"></script>
 </body>
 
+</html>
 </html>
