@@ -61,6 +61,6 @@ class Carousel {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    new Carousel('research-carousel');
+    new Carousel('lab-carousel');
     new Carousel('members-carousel');
 });
