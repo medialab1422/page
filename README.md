@@ -38,10 +38,9 @@ It describes the repository for the NTUT CSIE Interactive Media Laboratory websi
 │
 ├── index.html         (網站首頁)
 ├── about_us.html      (關於我們)
-├── project.html       (研究計畫)
 ├── course.html        (相關課程)
-├── learning.html      (讀書會)
-└── meeting.html       (會議記錄)
+├── project.html       (研究計畫)
+└── Freshman.html      (新生專區)
 |
 ├── css/               (主要的 CSS 樣式表)
 │   ├── main.css
