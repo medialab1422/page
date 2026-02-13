@@ -24,12 +24,12 @@ background-position:relative;
 clear: both;
 /*background-image:url("../design/background.jpg");
 background-size:1920px 1080px;
--moz-background-size:1920px 1080px;/* �Ѫ����� Firefox */
+-moz-background-size:1920px 1080px;/* Ѫ Firefox */
 background-repeat:no-repeat;
 background-attachment:fixed;
 /*background-position:center;*/
 /*padding-top:80px;*/
-font:70%/160% "verdana",sans-serif; 
+font:90/160% 'Noto Sans TC', "verdana",sans-serif;
 color:#192666; _text-align:center;
 }
 body img
@@ -206,7 +206,7 @@ code, kbd, samp {font-family:monospace; font-size:110%;}
     /* Right column - Archive */
     #col ul#archive {margin:15px 0; padding:0; list-style:none;}
     #col ul#archive li {margin:0; padding:0; border-bottom:1px solid #E0E8FA;}
-    #col ul#archive li a {display:block; padding:3px 0 3px 22px; background:url("../design/ico_archive.gif") 5px 50% no-repeat; text-decoration:none;}
+    #col ul#archive li a {display:block; padding:3px 0 33px 22px; background:url("../design/ico_archive.gif") 5px 50% no-repeat; text-decoration:none;}
     #col ul#archive li a:hover {background-color:#D3DFF8; color:#192666;}
     #col ul#archive li#archive-active a {background:#E0E8FA url("../design/ico_archive2.gif") 5px 6px no-repeat; font-weight:bold;}
     
@@ -401,3 +401,56 @@ code, kbd, samp {font-family:monospace; font-size:110%;}
             overflow: auto;
             font-size: 1em;
         }
+/* Carousel Styles for about_us.html */
+.carousel-container {
+    position: relative;
+    width: 100%; /* Occupy full width of parent */
+    max-width: 720px; /* Max width constraint */
+    height: 360px; /* Fixed height for consistency */
+    margin: 1em auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0; /* Light background for visibility */
+}
+.carousel-slide {
+    display: none; /* Hidden by default */
+    width: 100%;
+    height: 100%;
+    text-align: center; /* Center content horizontally */
+    line-height: 360px; /* Vertically center content */
+    font-size: 2em;
+    color: #555;
+    position: absolute; /* Stack slides */
+    top: 0;
+    left: 0;
+}
+.carousel-slide.active {
+    display: block; /* Show active slide */
+}
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Contain image within bounds */
+    vertical-align: middle; /* Align image vertically */
+    display: block; /* Ensure image takes up space */
+}
+.carousel-nav {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    font-size: 1.5em;
+    z-index: 10;
+}
+.carousel-nav.prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+.carousel-nav.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
